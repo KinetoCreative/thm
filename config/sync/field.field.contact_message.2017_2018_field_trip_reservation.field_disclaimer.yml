@@ -1,0 +1,25 @@
+uuid: 2119a311-edc8-4ca5-8f5f-8251322388a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_reservation
+    - field.storage.contact_message.field_disclaimer
+  module:
+    - markup
+id: contact_message.2017_2018_field_trip_reservation.field_disclaimer
+field_name: field_disclaimer
+entity_type: contact_message
+bundle: 2017_2018_field_trip_reservation
+label: Disclaimer
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>A $50 non-refundable deposit is required once you receive your reservation via email. Your reservation cannot be confirmed until this payment is received.&nbsp;<strong>The balance is due one week prior to your scheduled visit.</strong>&nbsp;The museum accepts payment in the form of cashier's check, school check, cash, Visa, MasterCard, Discover, or American Express.&nbsp;<u>The museum does not accept purchase orders</u>. Please call the Reservations Department at <a rel=\"noreferrer\" target=\"_blank\">713-337-8451</a> with a credit card number or mail a check to: The Health Museum, 1515 Hermann Drive, Houston, Texas 77004 Attn: Reservations</p>\r\n\r\n<p>Questions?<br />\r\nContact the Reservations Coordinator at&nbsp;<a href=\"mailto:reservations@thehealthmuseum.org\" target=\"_blank\">reservations@thehealthmuseum.org</a></p>\r\n\r\n<h3>BY CLICKING SUBMIT, YOU AND ANY OTHER ATTENDING ADULTS AGREE TO THE HEALTH MUSEUM'S POLICIES AND PROCEDURES</h3>\r\n"
+    format: ckeditor
+field_type: markup

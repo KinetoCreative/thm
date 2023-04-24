@@ -1,0 +1,19 @@
+uuid: 69529cc9-ee8a-47d4-9e8f-a1916f6d60a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.reservation_tickets
+    - field.storage.contact_message.field_teacher_email
+id: contact_message.reservation_tickets.field_teacher_email
+field_name: field_teacher_email
+entity_type: contact_message
+bundle: reservation_tickets
+label: 'Teacher Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

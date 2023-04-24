@@ -1,0 +1,44 @@
+uuid: c97f5374-f737-4ea6-bec9-2e67ee641aab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_content.field_content
+    - paragraphs.paragraphs_type.flexible_content
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_body:
+      children:
+        - field_content
+      label: Body
+      parent_name: ''
+      region: content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: paragraph.flexible_content.default
+targetEntityType: paragraph
+bundle: flexible_content
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+hidden:
+  created: true
+  uid: true

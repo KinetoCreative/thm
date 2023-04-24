@@ -1,0 +1,21 @@
+uuid: 9784b71f-c505-4565-b030-33f7bdb26aaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_styled_title
+    - node.type.exhibit
+  module:
+    - text
+id: node.exhibit.field_styled_title
+field_name: field_styled_title
+entity_type: node
+bundle: exhibit
+label: 'Styled Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

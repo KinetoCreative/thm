@@ -1,0 +1,105 @@
+uuid: 0090a9cd-5a72-4a30-8267-5b3f0b7acea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_in_person_field_trip
+    - field.field.contact_message.2020_21_in_person_field_trip.field_email
+    - field.field.contact_message.2020_21_in_person_field_trip.field_first_and_last_name
+    - field.field.contact_message.2020_21_in_person_field_trip.field_grade_level
+    - field.field.contact_message.2020_21_in_person_field_trip.field_school_address
+    - field.field.contact_message.2020_21_in_person_field_trip.field_school_name
+    - field.field.contact_message.2020_21_in_person_field_trip.field_school_phone
+    - field.field.contact_message.2020_21_in_person_field_trip.field_work_phone_number
+  module:
+    - options
+    - telephone
+id: contact_message.2020_21_in_person_field_trip.default
+targetEntityType: contact_message
+bundle: 2020_21_in_person_field_trip
+mode: default
+content:
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_first_and_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_grade_level:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_school_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_school_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_school_phone:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_work_phone_number:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  mail:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  message:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  subject:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

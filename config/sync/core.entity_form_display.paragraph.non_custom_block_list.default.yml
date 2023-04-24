@@ -1,0 +1,24 @@
+uuid: a0192cb4-d99a-4820-b959-2b8cf3c89db1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.non_custom_block_list.field_block_ids
+    - paragraphs.paragraphs_type.non_custom_block_list
+id: paragraph.non_custom_block_list.default
+targetEntityType: paragraph
+bundle: non_custom_block_list
+mode: default
+content:
+  field_block_ids:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

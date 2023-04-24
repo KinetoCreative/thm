@@ -1,0 +1,24 @@
+uuid: 69a20cf4-83d2-4d13-8e3f-836665a25bad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.drop_down_grid.field_dropdown_grid_content
+    - paragraphs.paragraphs_type.drop_down_grid
+  module:
+    - entity_reference_revisions
+id: paragraph.drop_down_grid.default
+targetEntityType: paragraph
+bundle: drop_down_grid
+mode: default
+content:
+  field_dropdown_grid_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

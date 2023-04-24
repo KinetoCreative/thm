@@ -1,0 +1,19 @@
+uuid: bd7ffc75-d020-43a6-8a98-24cdbe595666
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.health_adventure
+    - field.storage.contact_message.field_school_name
+id: contact_message.health_adventure.field_school_name
+field_name: field_school_name
+entity_type: contact_message
+bundle: health_adventure
+label: 'School Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

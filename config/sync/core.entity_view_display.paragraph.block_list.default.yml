@@ -1,0 +1,48 @@
+uuid: 2fb9f24b-46f3-4d68-b458-55c77b1e282d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_list.field_blocks
+    - field.field.paragraph.block_list.field_columns
+    - paragraphs.paragraphs_type.block_list
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - field_blocks
+id: paragraph.block_list.default
+targetEntityType: paragraph
+bundle: block_list
+mode: default
+content:
+  field_blocks:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  created: true
+  field_columns: true
+  uid: true

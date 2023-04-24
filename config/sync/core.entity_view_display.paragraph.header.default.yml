@@ -1,0 +1,70 @@
+uuid: 49438d68-ac1a-4aa1-85e8-9e7730b01366
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header.field_header_copy
+    - field.field.paragraph.header.field_header_video
+    - field.field.paragraph.header.field_header_video_cover
+    - paragraphs.paragraphs_type.header
+  module:
+    - field_group
+    - file
+    - image
+    - text
+third_party_settings:
+  field_group:
+    group_header_video_container:
+      children:
+        - field_header_video_cover
+        - field_header_video
+        - field_header_copy
+        - created
+        - uid
+      label: 'Header Video Container'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: header-video-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: paragraph.header.default
+targetEntityType: paragraph
+bundle: header
+mode: default
+content:
+  field_header_copy:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_header_video:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_header_video_cover:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: 6d08afff-24fd-4d66-8a93-98c66346dca8
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_special_needs
+field_name: field_special_needs
+entity_type: contact_message
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

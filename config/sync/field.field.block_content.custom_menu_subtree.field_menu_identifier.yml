@@ -1,0 +1,19 @@
+uuid: 71c3bd53-bdbb-485f-b672-857933930fca
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_menu_subtree
+    - field.storage.block_content.field_menu_identifier
+id: block_content.custom_menu_subtree.field_menu_identifier
+field_name: field_menu_identifier
+entity_type: block_content
+bundle: custom_menu_subtree
+label: 'Menu Identifier'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

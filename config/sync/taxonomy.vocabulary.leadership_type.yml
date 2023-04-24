@@ -1,0 +1,8 @@
+uuid: e9422a0d-33e0-468f-b881-14db7ce2f417
+langcode: en
+status: true
+dependencies: {  }
+name: 'Leadership Type'
+vid: leadership_type
+description: ''
+weight: 0

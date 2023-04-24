@@ -1,0 +1,69 @@
+uuid: a2500172-c2eb-4a65-bbfd-1b68f217fdf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.program
+    - field.field.node.educational_program.body
+    - field.field.node.educational_program.field_date
+    - field.field.node.educational_program.field_featured_image
+    - field.field.node.educational_program.field_header_background
+    - field.field.node.educational_program.field_header_video
+    - field.field.node.educational_program.field_hero_copy
+    - field.field.node.educational_program.field_interest_form_copy
+    - field.field.node.educational_program.field_meta_tags
+    - field.field.node.educational_program.field_program_interest_form
+    - field.field.node.educational_program.field_program_sections
+    - field.field.node.educational_program.field_summary
+    - field.field.node.educational_program.field_yoast_seo
+    - node.type.educational_program
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - field_program_interest_form
+id: node.educational_program.program
+targetEntityType: node
+bundle: educational_program
+mode: program
+content:
+  field_program_interest_form:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  addtoany: true
+  body: true
+  field_date: true
+  field_featured_image: true
+  field_header_background: true
+  field_header_video: true
+  field_hero_copy: true
+  field_interest_form_copy: true
+  field_meta_tags: true
+  field_program_sections: true
+  field_summary: true
+  field_yoast_seo: true
+  links: true

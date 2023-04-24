@@ -1,0 +1,10 @@
+uuid: ea5628ae-17a4-4035-8afe-b28c12371845
+langcode: en
+status: true
+dependencies: {  }
+id: buttons
+label: Buttons
+icon_uuid: null
+icon_default: null
+description: 'Buttons arranged in a row'
+behavior_plugins: {  }

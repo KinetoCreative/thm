@@ -1,0 +1,21 @@
+uuid: 72e2dfa7-70bc-4ef5-86a8-4a724126495e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.health_adventure
+    - field.storage.contact_message.field_school_phone
+  module:
+    - telephone
+id: contact_message.health_adventure.field_school_phone
+field_name: field_school_phone
+entity_type: contact_message
+bundle: health_adventure
+label: 'School Phone'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

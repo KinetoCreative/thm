@@ -1,0 +1,24 @@
+uuid: 19f9b4d5-ac2a-45bd-9719-b3a6d4eb968b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact_form_text
+    - paragraphs.paragraphs_type.contact_form_and_content
+  module:
+    - text
+id: paragraph.contact_form_and_content.field_contact_form_text
+field_name: field_contact_form_text
+entity_type: paragraph
+bundle: contact_form_and_content
+label: 'Contact form text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<h3>Group request</h3>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac convallis turpis. Morbi quis dui at neque ornare venenatis nec in ipsum.</p>"
+    format: ckeditor
+default_value_callback: ''
+settings: {  }
+field_type: text_long

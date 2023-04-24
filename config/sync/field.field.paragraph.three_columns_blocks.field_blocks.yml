@@ -1,0 +1,40 @@
+uuid: ab15c0b6-df02-4300-ab0e-ab92a08624d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_visual_boxes
+    - block_content.type.full_width_cta
+    - block_content.type.homepage_exhibits
+    - block_content.type.plan_your_visit
+    - block_content.type.quick_info_box
+    - block_content.type.short_textarea
+    - block_content.type.visit_info_box
+    - field.storage.paragraph.field_blocks
+    - paragraphs.paragraphs_type.three_columns_blocks
+id: paragraph.three_columns_blocks.field_blocks
+field_name: field_blocks
+entity_type: paragraph
+bundle: three_columns_blocks
+label: Blocks
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      cta_visual_boxes: cta_visual_boxes
+      full_width_cta: full_width_cta
+      homepage_exhibits: homepage_exhibits
+      plan_your_visit: plan_your_visit
+      quick_info_box: quick_info_box
+      short_textarea: short_textarea
+      visit_info_box: visit_info_box
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: short_textarea
+field_type: entity_reference

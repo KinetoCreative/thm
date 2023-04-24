@@ -1,0 +1,21 @@
+uuid: 750c9b57-1df2-4961-8825-0fe8ce6b73c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_school_phone
+  module:
+    - telephone
+id: contact_message.field_trip.field_school_phone
+field_name: field_school_phone
+entity_type: contact_message
+bundle: field_trip
+label: 'School Phone'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

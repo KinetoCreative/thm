@@ -1,0 +1,25 @@
+uuid: 6c9b5858-9257-40d4-a6c1-39fe1ccc8f14
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_professional_text
+  module:
+    - markup
+id: contact_message.2020_21_field_trips.field_professional_text
+field_name: field_professional_text
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'Professional Development for Teachers Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<ul class=\"options-list full-width\">\r\n<li>Learn more about The Health Museum by bringing a group of teachers for a Teacher Tour $7 per person, minimum of 15 people</li>\r\n<li>Receive an overview of the museum's school programs, explore our current exhibitions and visit the Amazing Body Store</li>\r\n<li>Add an interactive science class (prices vary by class) and earn CPE credit as you learn new ideas and strategies for teaching and learning hands-on science.</li>\r\n<li>Add a DeBakey Cell Lab visit for $5 extra</li>\r\n<li>The Health Museum has a Texas State Board of Educator Certification (SBEC) and is an approved Continuing Professional Education (CPE) provider.</li>\r\n</ul>"
+    format: ckeditor
+field_type: markup

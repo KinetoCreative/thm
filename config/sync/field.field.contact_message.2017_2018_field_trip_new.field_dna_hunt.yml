@@ -1,0 +1,23 @@
+uuid: 7e70b6b6-f512-46df-9400-785957928f2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_dna_hunt
+id: contact_message.2017_2018_field_trip_new.field_dna_hunt
+field_name: field_dna_hunt
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'DNA Hunt'
+description: "10-30 Students per session<br/>\r\n$5 per student"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

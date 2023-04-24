@@ -1,0 +1,392 @@
+uuid: 147fb6f8-1a42-4248-8e48-24e364c277ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.group_reservation_form
+    - field.field.contact_message.group_reservation_form.field_address_line
+    - field.field.contact_message.group_reservation_form.field_agreed_ftbdi
+    - field.field.contact_message.group_reservation_form.field_agreed_ftci
+    - field.field.contact_message.group_reservation_form.field_agreed_ftpf
+    - field.field.contact_message.group_reservation_form.field_agreed_gpp
+    - field.field.contact_message.group_reservation_form.field_city
+    - field.field.contact_message.group_reservation_form.field_complimentary_chaperones
+    - field.field.contact_message.group_reservation_form.field_dbcl_from_group_info
+    - field.field.contact_message.group_reservation_form.field_disclaimer_and_info
+    - field.field.contact_message.group_reservation_form.field_email
+    - field.field.contact_message.group_reservation_form.field_first_choice_date
+    - field.field.contact_message.group_reservation_form.field_first_name
+    - field.field.contact_message.group_reservation_form.field_group_address
+    - field.field.contact_message.group_reservation_form.field_group_adult_dcl
+    - field.field.contact_message.group_reservation_form.field_group_child_dcl
+    - field.field.contact_message.group_reservation_form.field_group_city
+    - field.field.contact_message.group_reservation_form.field_group_information_state
+    - field.field.contact_message.group_reservation_form.field_group_information_zip
+    - field.field.contact_message.group_reservation_form.field_group_name
+    - field.field.contact_message.group_reservation_form.field_group_phone_number
+    - field.field.contact_message.group_reservation_form.field_group_senior_dcl
+    - field.field.contact_message.group_reservation_form.field_group_teen_dcl
+    - field.field.contact_message.group_reservation_form.field_last_name
+    - field.field.contact_message.group_reservation_form.field_mobile_phone_number
+    - field.field.contact_message.group_reservation_form.field_number_adults
+    - field.field.contact_message.group_reservation_form.field_number_chaperones
+    - field.field.contact_message.group_reservation_form.field_number_children_big
+    - field.field.contact_message.group_reservation_form.field_number_children_small
+    - field.field.contact_message.group_reservation_form.field_number_gift_bags
+    - field.field.contact_message.group_reservation_form.field_number_seniors
+    - field.field.contact_message.group_reservation_form.field_order_souvenir_bags
+    - field.field.contact_message.group_reservation_form.field_requested_arrival_time
+    - field.field.contact_message.group_reservation_form.field_second_choice_date
+    - field.field.contact_message.group_reservation_form.field_souvenir_bag_text
+    - field.field.contact_message.group_reservation_form.field_special_requests
+    - field.field.contact_message.group_reservation_form.field_state
+    - field.field.contact_message.group_reservation_form.field_to_form_group_info
+    - field.field.contact_message.group_reservation_form.field_zip_code
+  module:
+    - datetime
+    - markup
+    - options
+id: contact_message.group_reservation_form.default
+targetEntityType: contact_message
+bundle: group_reservation_form
+mode: default
+content:
+  field_address_line:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_agreed_ftbdi:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_agreed_ftci:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_agreed_ftpf:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_agreed_gpp:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_complimentary_chaperones:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_dbcl_from_group_info:
+    type: markup
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_disclaimer_and_info:
+    type: markup
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_first_choice_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_group_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_group_adult_dcl:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_group_child_dcl:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_group_city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_group_information_state:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_group_information_zip:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_group_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_group_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_group_senior_dcl:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_group_teen_dcl:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_mobile_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_number_adults:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_number_chaperones:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_number_children_big:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_number_children_small:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_number_gift_bags:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_number_seniors:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_order_souvenir_bags:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_requested_arrival_time:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_second_choice_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_souvenir_bag_text:
+    type: markup
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_special_requests:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_state:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_to_form_group_info:
+    type: markup
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_zip_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  mail:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: -2
+    region: content
+  message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -3
+    region: content
+  subject:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -1
+    region: content
+hidden: {  }

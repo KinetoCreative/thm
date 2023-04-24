@@ -1,0 +1,21 @@
+uuid: 062da3a1-30c9-423d-bbda-8731b509835f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_2nd_choice_date_and_time
+id: contact_message.2017_2018_field_trip_new.field_2nd_choice_date_and_time
+field_name: field_2nd_choice_date_and_time
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: '2nd Choice Date and Time'
+description: '<p>Hours: Tuesday - Friday; 10:00 AM - 5:00 PM/ Thursday; 10 AM - 2: 00 PM<p>'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1602786655
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

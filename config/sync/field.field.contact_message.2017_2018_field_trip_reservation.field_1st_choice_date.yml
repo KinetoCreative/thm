@@ -1,0 +1,21 @@
+uuid: 9980f834-1a9f-4281-85b5-0dc0a267ab19
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_reservation
+    - field.storage.contact_message.field_1st_choice_date
+  module:
+    - datetime
+id: contact_message.2017_2018_field_trip_reservation.field_1st_choice_date
+field_name: field_1st_choice_date
+entity_type: contact_message
+bundle: 2017_2018_field_trip_reservation
+label: '1st Choice Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

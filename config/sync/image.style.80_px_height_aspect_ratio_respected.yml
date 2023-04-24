@@ -1,0 +1,15 @@
+uuid: 0746ad10-ec9b-4d1d-b46a-89e0108e5399
+langcode: en
+status: true
+dependencies: {  }
+name: 80_px_height_aspect_ratio_respected
+label: '80px height Aspect Ratio Respected'
+effects:
+  65146b09-19ac-4229-85f7-7e3d976e9a90:
+    uuid: 65146b09-19ac-4229-85f7-7e3d976e9a90
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 80
+      upscale: true

@@ -1,0 +1,23 @@
+uuid: 98088a2f-302b-45e0-a57d-96e12e0bfec2
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_field_trip_bus_info
+id: contact_message.2017_2018_field_trip_new.field_field_trip_bus_info
+field_name: field_field_trip_bus_info
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'I have read and agree to: <a href="/public/Bus_Driver.pdf"><strong>Field Trip Bus Driver Info</strong></a> (click to read)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

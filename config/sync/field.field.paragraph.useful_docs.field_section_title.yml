@@ -1,0 +1,21 @@
+uuid: 4ac5a86d-30de-4ffc-bc0c-ae7cf0707267
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.useful_docs
+  module:
+    - text
+id: paragraph.useful_docs.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: useful_docs
+label: 'Section Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,23 @@
+uuid: 45d058fc-f8ef-4070-b170-626f299ae1d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_owl_pellet
+id: contact_message.2020_21_field_trips.field_owl_pellet
+field_name: field_owl_pellet
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'Owl Pellet'
+description: "10-30 Students per session<br/>\r\n$5 per student"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

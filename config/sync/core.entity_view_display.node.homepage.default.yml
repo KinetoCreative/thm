@@ -1,0 +1,199 @@
+uuid: e96b423d-1812-4723-839a-a6d789f59f2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage.body
+    - field.field.node.homepage.field_header_copy
+    - field.field.node.homepage.field_header_video
+    - field.field.node.homepage.field_header_video_cover
+    - field.field.node.homepage.field_hero_copy
+    - field.field.node.homepage.field_hero_links
+    - field.field.node.homepage.field_hero_slides
+    - field.field.node.homepage.field_hide_overlay
+    - field.field.node.homepage.field_homepage_image
+    - field.field.node.homepage.field_meta_tags
+    - field.field.node.homepage.field_yoast_seo
+    - node.type.homepage
+  module:
+    - ds
+    - field_group
+    - file
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - group_homepage_hero
+        - field_homepage_image
+        - field_header_video_cover
+        - field_hero_slides
+        - group_header_video_container
+        - field_header_video
+        - group_copy_wrapper
+        - field_header_copy
+        - body
+        - field_hero_copy
+        - links
+        - node_links
+    fields:
+      node_links:
+        plugin_id: node_links
+        weight: 7
+        label: inline
+        formatter: default
+  field_group:
+    group_header_video_container:
+      children:
+        - field_homepage_image
+        - field_header_video_cover
+        - field_header_video
+        - body
+        - field_header_copy
+        - links
+        - node_links
+      label: 'Header Video Container'
+      parent_name: ''
+      region: ds_content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: header-video-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_homepage_hero:
+      children:
+        - field_hero_slides
+        - group_copy_wrapper
+      label: 'Homepage hero'
+      parent_name: ''
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: exhibit-hero
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_copy_wrapper:
+      children:
+        - field_hero_copy
+      label: 'Copy wrapper'
+      parent_name: group_homepage_hero
+      region: ds_content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: copy-wrapper
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.homepage.default
+targetEntityType: node
+bundle: homepage
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  field_header_copy:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  field_header_video:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_header_video_cover:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  field_hero_copy:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  field_hero_slides:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: hero_slide_v2_1920_x_450_
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      ds:
+        ds_limit: '5'
+    weight: 1
+    region: ds_content
+  field_homepage_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: ds_content
+hidden:
+  addtoany: true
+  field_hero_links: true
+  field_hide_overlay: true
+  field_meta_tags: true
+  field_yoast_seo: true

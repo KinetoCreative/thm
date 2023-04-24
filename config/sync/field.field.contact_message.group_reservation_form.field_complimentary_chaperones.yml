@@ -1,0 +1,19 @@
+uuid: 6680f0d9-4302-4d1d-878e-2fa5d6324cb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.group_reservation_form
+    - field.storage.contact_message.field_complimentary_chaperones
+id: contact_message.group_reservation_form.field_complimentary_chaperones
+field_name: field_complimentary_chaperones
+entity_type: contact_message
+bundle: group_reservation_form
+label: 'Complimentary Chaperones '
+description: 'Groups bringing children, age 3-18, will be allowed one free chaperone per ten children. Each additional chaperone must pay the Adult price.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

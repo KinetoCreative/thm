@@ -1,0 +1,30 @@
+uuid: 8babf520-1f92-43f2-b2d4-122841d99740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_columns_photos.field_three_images
+    - image.style.cropped_square_480
+    - paragraphs.paragraphs_type.three_columns_photos
+  module:
+    - ds
+    - image
+id: paragraph.three_columns_photos.default
+targetEntityType: paragraph
+bundle: three_columns_photos
+mode: default
+content:
+  field_three_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: cropped_square_480
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    weight: 0
+    region: content
+hidden: {  }

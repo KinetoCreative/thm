@@ -1,0 +1,21 @@
+uuid: 8c640d50-7de0-406c-9c68-5429592c429c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.contact_form_and_content
+  module:
+    - text
+id: paragraph.contact_form_and_content.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: contact_form_and_content
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 0fd19036-854c-4bf5-a16d-ba1eeb3c9a90
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_width_cta
+    - field.storage.block_content.field_layout
+  module:
+    - options
+id: block_content.full_width_cta.field_layout
+field_name: field_layout
+entity_type: block_content
+bundle: full_width_cta
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

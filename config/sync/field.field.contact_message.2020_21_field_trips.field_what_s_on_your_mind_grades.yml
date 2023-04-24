@@ -1,0 +1,23 @@
+uuid: 0bb967b7-a939-47f8-9cbe-9aad7e35489b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_what_s_on_your_mind_grades
+id: contact_message.2020_21_field_trips.field_what_s_on_your_mind_grades
+field_name: field_what_s_on_your_mind_grades
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'What''s On Your Mind? (Grades 6 & up) Add $15 per student'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

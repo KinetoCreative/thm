@@ -1,0 +1,10 @@
+uuid: 43a76f79-6a35-4726-9b7e-5b5424af2f50
+langcode: en
+status: true
+dependencies: {  }
+id: page_sections_with_sidebar
+label: 'Page Sections with Sidebar'
+icon_uuid: null
+icon_default: null
+description: 'Nested paragraph sections inside a full-width paragraph with a sidebar column'
+behavior_plugins: {  }

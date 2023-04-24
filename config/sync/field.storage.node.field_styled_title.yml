@@ -1,0 +1,20 @@
+uuid: edd51140-02d5-40ee-81f0-2d2bcb97af59
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_styled_title
+field_name: field_styled_title
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

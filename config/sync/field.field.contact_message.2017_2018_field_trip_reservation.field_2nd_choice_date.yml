@@ -1,0 +1,21 @@
+uuid: 4f747e83-2802-46ac-89e1-da00dbdd22eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_reservation
+    - field.storage.contact_message.field_2nd_choice_date
+  module:
+    - datetime
+id: contact_message.2017_2018_field_trip_reservation.field_2nd_choice_date
+field_name: field_2nd_choice_date
+entity_type: contact_message
+bundle: 2017_2018_field_trip_reservation
+label: '2nd Choice Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,92 @@
+<?php 
+  use Drupal\Core\Url;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function thm_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
+}
+
+function thm_preprocess_views_view(&$variables){
+  try{
+    if($variables['view']->element && isset($variables['view']->element['#display_id'])) {
+      $view_id = $variables['view']->element['#display_id'];
+      if ($view_id == 'news_all'){
+        $query = \Drupal::entityQuery('taxonomy_term');
+        $query->condition('vid', "news_item_type");
+        $query->sort('weight');
+        $tids = $query->execute();
+        $categories = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
+
+        if (!empty($categories)){
+          $variables['news_types'] = array();
+          foreach($categories as $c){
+            $variables['news_types'][$c->get('tid')->value] = $c->get('name')->value;
+          }
+        }
+      }
+    }
+  } catch (Exception $e){
+
+  }
+
+}
+
+function thm_form_contact_message_program_interest_form_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if (!empty($node)){
+      $tid = @$node->field_program_form[0]->target_id;
+      if (empty($tid)){
+        $tid = $node->nid->value;
+      }
+    }
+
+    $form['field_interested_in_reference']['widget']['#default_value'] = $tid; 
+    $form['actions']['submit']['#submit'][] = 'program_interest_form_submit';
+}
+
+/**
+ * Contact form submit handler
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function program_interest_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $current_uri = \Drupal::request()->getRequestUri();
+  $form_state->setRedirectUrl(Url::fromUserInput($current_uri));
+}
+function thm_form_alter(&$form, $form_state, $form_id){
+    $auth_links = '<div class="user-auth-links"><a class="password" href="/user/password">Forgot password?</a></div>';
+    if ($form_id == 'user_login_form' || $form_id == 'user_register_form'){
+      $form['#prefix'] = '<div class="user-form-wrapper">';
+      $form['#suffix'] = '</div>'.$auth_links;
+    }
+}
+
+function thm_preprocess_page(&$variables){
+  $node_class = '';
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node && $node->hasField('field_classes')) {
+     foreach ($node->get('field_classes') as $c){
+      $node_class.= $c->value.' ';
+    }   
+  }
+
+  $variables['node_class'] = $node_class;
+
+}
+function thm_preprocess_field(&$variables){
+  if($variables['field_name'] == 'field_header_video_cover') {
+    $variables['attributes']['class'][] = 'hide_overlay';
+  }
+
+}
+
+function thm_preprocess_block(&$variables){
+
+}

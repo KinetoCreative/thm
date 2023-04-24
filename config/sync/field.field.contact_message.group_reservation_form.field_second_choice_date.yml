@@ -1,0 +1,24 @@
+uuid: d6e69b4b-b433-4580-af78-8aca06378412
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.group_reservation_form
+    - field.storage.contact_message.field_second_choice_date
+  module:
+    - datetime
+id: contact_message.group_reservation_form.field_second_choice_date
+field_name: field_second_choice_date
+entity_type: contact_message
+bundle: group_reservation_form
+label: 'Alternative Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

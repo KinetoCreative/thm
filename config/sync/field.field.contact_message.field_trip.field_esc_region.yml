@@ -1,0 +1,19 @@
+uuid: 0066956b-2534-476f-8bb5-ca51b7b1166b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_esc_region
+id: contact_message.field_trip.field_esc_region
+field_name: field_esc_region
+entity_type: contact_message
+bundle: field_trip
+label: 'ESC Region'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

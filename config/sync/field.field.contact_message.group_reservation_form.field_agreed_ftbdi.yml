@@ -1,0 +1,23 @@
+uuid: bc6f6d54-eb0a-472c-9ab8-aa832a752d16
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.group_reservation_form
+    - field.storage.contact_message.field_agreed_ftbdi
+id: contact_message.group_reservation_form.field_agreed_ftbdi
+field_name: field_agreed_ftbdi
+entity_type: contact_message
+bundle: group_reservation_form
+label: 'Agreed ftbdi'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'I have read and agree to Field Trip Bus Driver Info'
+  off_label: 'I have read and agree to Field Trip Bus Driver Info'
+field_type: boolean

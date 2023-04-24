@@ -1,0 +1,57 @@
+uuid: 960e7721-adf1-4de0-b93e-045eede51410
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_and_blocklist.field_block_ids
+    - field.field.paragraph.sidebar_and_blocklist.field_blocks
+    - field.field.paragraph.sidebar_and_blocklist.field_custom_blocks
+    - field.field.paragraph.sidebar_and_blocklist.field_sidebar_boxes
+    - paragraphs.paragraphs_type.sidebar_and_blocklist
+id: paragraph.sidebar_and_blocklist.default
+targetEntityType: paragraph
+bundle: sidebar_and_blocklist
+mode: default
+content:
+  field_block_ids:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_blocks:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_custom_blocks:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sidebar_boxes:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

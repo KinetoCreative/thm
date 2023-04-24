@@ -1,0 +1,28 @@
+uuid: 1ed254bc-2afc-4904-9c18-a7a6adc86235
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_exhibits
+    - field.storage.block_content.field_large_exhibits
+    - node.type.exhibit
+id: block_content.homepage_exhibits.field_large_exhibits
+field_name: field_large_exhibits
+entity_type: block_content
+bundle: homepage_exhibits
+label: 'Large Exhibits'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      exhibit: exhibit
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

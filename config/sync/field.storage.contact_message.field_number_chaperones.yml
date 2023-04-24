@@ -1,0 +1,21 @@
+uuid: 3549fe19-c616-4963-b764-58af16bd66af
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_number_chaperones
+field_name: field_number_chaperones
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

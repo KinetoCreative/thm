@@ -1,0 +1,96 @@
+.layout-container{
+    &.plan-your-visit{
+        overflow:hidden;
+        #block-mainpagecontent{
+            margin-bottom:60px;
+        }
+        .map-container{
+            width:100%;
+            #holder-map{
+                height:680px;
+            }
+        }
+
+        .block-content--type-directions{
+            
+            .field--name-field-address{
+                text-align: center;
+                font-size:32px;
+                line-height: 36px;
+                font-family:$ff-gotham;
+                margin:40px auto 0;
+                &:before{
+                    content:'';
+                    display: block;
+                    width:120px;
+                    height:120px;
+                    margin:0px auto 20px;
+                    background:url(../images/address_icon.svg) no-repeat;
+                }
+                @media #{$break-max-768}{
+                    font-size:24px;
+                    line-height: 27px;
+                    &:before{
+                        width:80px;
+                        height:80px;
+                        background-size:100%;
+                    }
+                }
+            }
+        }
+        .directions-block-sidebar{
+            width:45%;
+            float:left;
+            .field--name-field-image{
+                img{
+                    width:100%;
+                    height:auto;
+                    display: block;
+                }
+            }
+        }
+        .directions-block-content{
+            width:50%;
+            float:right;
+            .field--name-field-title{
+                font-size:32px;
+                font-weight:$fw-medium;
+                font-family:$ff-gotham;
+            }
+            .field--name-body{
+                h4{
+                    font-size:22px;
+                    line-height: 22px;
+                    font-family:$ff-gotham;
+                    font-weight:$fw-medium;
+                    margin:50px auto 10px;
+                }
+                ul{
+                    li{
+                        font-family:$ff-roboto;
+                        font-size:16px;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+        @media #{$break-max-768}{
+            .directions-block-sidebar{
+                width:100%;
+                float:none;
+                .field--name-field-image{
+                    width:100%;
+                    max-width:440px;
+                    margin:0px auto;
+                }
+            }
+            .directions-block-content{
+                width:100%;
+                float:none;
+                margin:40px auto;
+                width:100%;
+                max-width:440px;
+            }
+        }
+    }
+}

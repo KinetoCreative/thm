@@ -1,0 +1,21 @@
+uuid: f3abf36d-20d3-4696-b509-edcecb0cae01
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.education_form
+    - field.storage.contact_message.field_birth
+  module:
+    - datetime
+id: contact_message.education_form.field_birth
+field_name: field_birth
+entity_type: contact_message
+bundle: education_form
+label: Birthdate
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

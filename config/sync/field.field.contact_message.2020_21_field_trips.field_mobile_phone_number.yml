@@ -1,0 +1,19 @@
+uuid: 27cdf145-2d97-4c44-84f3-c337de6e718f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_mobile_phone_number
+id: contact_message.2020_21_field_trips.field_mobile_phone_number
+field_name: field_mobile_phone_number
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'Mobile Phone'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

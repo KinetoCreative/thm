@@ -1,0 +1,19 @@
+uuid: d13277f2-18ed-48e7-8a43-0a19bcdc20ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.education_form
+    - field.storage.contact_message.field_owho_is_authorized_to_pick
+id: contact_message.education_form.field_owho_is_authorized_to_pick
+field_name: field_owho_is_authorized_to_pick
+entity_type: contact_message
+bundle: education_form
+label: 'Who is authorized to pick-up your child? Relationship to child?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

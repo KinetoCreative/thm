@@ -1,0 +1,20 @@
+uuid: 07628e3d-439e-40b6-a6ab-00e5c866981d
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - datetime
+id: contact_message.field_birth
+field_name: field_birth
+entity_type: contact_message
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

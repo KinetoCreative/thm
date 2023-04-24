@@ -1,0 +1,21 @@
+uuid: d34fd590-1c0d-4d04-8ebc-59735a760252
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.health_adventure
+    - field.storage.contact_message.field_how_did_you_hear_about_the
+  module:
+    - options
+id: contact_message.health_adventure.field_how_did_you_hear_about_the
+field_name: field_how_did_you_hear_about_the
+entity_type: contact_message
+bundle: health_adventure
+label: 'How did you hear about the Health Adventure Program?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

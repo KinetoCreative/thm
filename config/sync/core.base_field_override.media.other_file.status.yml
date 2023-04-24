@@ -1,0 +1,22 @@
+uuid: fed35a93-f1ce-4531-8874-c9aa69f653ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.other_file
+id: media.other_file.status
+field_name: status
+entity_type: media
+bundle: other_file
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

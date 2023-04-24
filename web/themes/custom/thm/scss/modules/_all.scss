@@ -1,0 +1,62 @@
+@mixin transform($val) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}
+
+@mixin rounded($radius: 0.5em) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color:$white;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+    color:$white;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+    color:$white;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+    color:$white;
+    }
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin prefix-property($name, $value) {
+  -webkit-#{$name}: $value;
+     -moz-#{$name}: $value;
+       -o-#{$name}: $value;
+          #{$name}: $value;
+}
+
+@mixin animation($name,
+                 $duration: 3s,
+                 $timing-function:ease,
+                 $delay:0s,
+                 $iteration-count: 1,
+                 $direction: normal,
+                 $fill-mode: none,
+                 $play-state: running) {
+  -webkit-animation: $name $duration $timing-function;// $delay $iteration-count $direction $fill-mode $play-state;
+  -moz-animation: $name $duration $timing-function $delay $iteration-count $direction $fill-mode $play-state;
+  animation: $name $duration $timing-function $delay $iteration-count $direction $fill-mode $play-state;
+}

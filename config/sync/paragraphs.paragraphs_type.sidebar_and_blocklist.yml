@@ -1,0 +1,6 @@
+uuid: 03688fc0-fa8c-4394-89bf-bea50a772457
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_and_blocklist
+label: 'Sidebar and Blocklist'

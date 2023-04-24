@@ -1,0 +1,23 @@
+uuid: 8516e679-5f74-4662-b4cf-e173db0e5b08
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_immersion_9_per_student_
+id: contact_message.field_trip.field_immersion_9_per_student_
+field_name: field_immersion_9_per_student_
+entity_type: contact_message
+bundle: field_trip
+label: 'Immersion ($9 per student)'
+description: 'Exploration Level plus additional hands-on activities, Full Immersion Labs, Breakout: Find the antidote for a mysterious virus'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

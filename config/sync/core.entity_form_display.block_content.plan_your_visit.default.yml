@@ -1,0 +1,66 @@
+uuid: 2fb45737-0efb-41fb-8964-78b574326238
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.plan_your_visit
+    - field.field.block_content.plan_your_visit.body
+    - field.field.block_content.plan_your_visit.field_page_sections
+    - field.field.block_content.plan_your_visit.field_quick_info_boxes
+    - field.field.block_content.plan_your_visit.field_title
+  module:
+    - paragraphs
+    - text
+id: block_content.plan_your_visit.default
+targetEntityType: block_content
+bundle: plan_your_visit
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_page_sections:
+    type: entity_reference_paragraphs
+    weight: 26
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_quick_info_boxes:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,15 @@
+uuid: 4fba24ef-a587-433b-bc5e-613f3b66f40e
+langcode: en
+status: true
+dependencies: {  }
+name: exhibit_thumb
+label: 'Exhibit Thumb'
+effects:
+  3a33969b-dd94-4135-ac13-2d1b6e67bf73:
+    uuid: 3a33969b-dd94-4135-ac13-2d1b6e67bf73
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 780
+      height: 680
+      anchor: center-center

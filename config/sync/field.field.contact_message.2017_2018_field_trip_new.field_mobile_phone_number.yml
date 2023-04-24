@@ -1,0 +1,19 @@
+uuid: 0dbfb30f-e3e1-4729-9bf7-e7ebe6964d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_mobile_phone_number
+id: contact_message.2017_2018_field_trip_new.field_mobile_phone_number
+field_name: field_mobile_phone_number
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'Mobile Phone'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

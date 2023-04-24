@@ -1,0 +1,30 @@
+uuid: 3834bd13-dc08-4fdc-a5ab-f7319f9aedf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_events_homepage
+  module:
+    - system
+    - views
+  theme:
+    - thm
+id: views_block__news_events_homepage_news_events_homepage
+theme: thm
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:news_events_homepage-news_events_homepage'
+settings:
+  id: 'views_block:news_events_homepage-news_events_homepage'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

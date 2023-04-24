@@ -1,0 +1,21 @@
+uuid: afd75856-06ad-4844-a1c0-ed444a23d777
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Submit
+    show_preview: true
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: 2020_21_in_person_field_trip
+label: '2020 - 21 In Person Field Trip'
+recipients:
+  - reservations@thehealthmuseum.org
+reply: ''
+weight: 0
+message: ''
+redirect: ''

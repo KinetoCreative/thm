@@ -1,0 +1,21 @@
+uuid: cf697adf-c479-4c9f-bd30-fd2dd4e6ed5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.slider_header
+  module:
+    - text
+id: paragraph.slider_header.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: slider_header
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

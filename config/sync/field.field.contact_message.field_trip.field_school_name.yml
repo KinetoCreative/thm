@@ -1,0 +1,19 @@
+uuid: dc6c3cf9-afc9-4b2a-bd4a-fe0bee21dcd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_school_name
+id: contact_message.field_trip.field_school_name
+field_name: field_school_name
+entity_type: contact_message
+bundle: field_trip
+label: 'School Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

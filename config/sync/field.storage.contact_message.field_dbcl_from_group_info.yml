@@ -1,0 +1,19 @@
+uuid: 6a5dbf03-5009-483a-8d6e-ddf8f167ac04
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - markup
+id: contact_message.field_dbcl_from_group_info
+field_name: field_dbcl_from_group_info
+entity_type: contact_message
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

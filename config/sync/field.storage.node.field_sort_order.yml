@@ -1,0 +1,51 @@
+uuid: 3c97905d-2bd1-453e-abb8-3d08b4d1929a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sort_order
+field_name: field_sort_order
+entity_type: node
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: !!float 1
+      label: '1'
+    -
+      value: !!float 2
+      label: '2'
+    -
+      value: !!float 3
+      label: '3'
+    -
+      value: !!float 4
+      label: '4'
+    -
+      value: !!float 5
+      label: '5'
+    -
+      value: !!float 6
+      label: '6'
+    -
+      value: !!float 7
+      label: '7'
+    -
+      value: !!float 8
+      label: '8'
+    -
+      value: !!float 9
+      label: '9'
+    -
+      value: !!float 10
+      label: '10'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

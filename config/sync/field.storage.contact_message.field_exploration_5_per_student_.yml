@@ -1,0 +1,18 @@
+uuid: da1ac01e-106d-439c-a8b1-d2a342fec821
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_exploration_5_per_student_
+field_name: field_exploration_5_per_student_
+entity_type: contact_message
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

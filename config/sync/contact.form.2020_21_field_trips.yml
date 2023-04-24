@@ -1,0 +1,20 @@
+uuid: 2987b336-b456-4a3b-9383-38af7d8e40d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Submit
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+id: 2020_21_field_trips
+label: '2020-21 Field Trips'
+recipients:
+  - reservations@thehealthmuseum.org
+reply: ''
+weight: 0
+message: ''
+redirect: ''

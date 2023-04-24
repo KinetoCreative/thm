@@ -1,0 +1,166 @@
+uuid: ae041864-a693-4f70-9c56-4f3007de8ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.homepage_teaser
+    - field.field.node.blog_entry.body
+    - field.field.node.blog_entry.field_author
+    - field.field.node.blog_entry.field_date
+    - field.field.node.blog_entry.field_featured_image
+    - field.field.node.blog_entry.field_meta_tags
+    - field.field.node.blog_entry.field_summary
+    - field.field.node.blog_entry.field_yoast_seo
+    - node.type.blog_entry
+  module:
+    - datetime
+    - ds
+    - field_group
+    - image
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - node_title
+        - field_date
+        - group_grid_item_wrapper
+        - field_featured_image
+        - group_grid_desc_wrapper
+        - field_summary
+        - group_button_wrapper
+        - node_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: div
+          class: title-blogs
+      node_link:
+        plugin_id: node_link
+        weight: 6
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': ''
+          wrapper: b
+          class: button-blogs
+  field_group:
+    group_grid_item_wrapper:
+      children:
+        - node_title
+        - group_grid_desc_wrapper
+      label: 'Grid Item Wrapper'
+      parent_name: ''
+      region: ds_content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'Grid Item Wrapper'
+        classes: 'item blog'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_grid_desc_wrapper:
+      children:
+        - field_date
+        - field_featured_image
+        - field_summary
+        - group_button_wrapper
+      label: 'Grid Desc Wrapper'
+      parent_name: group_grid_item_wrapper
+      region: ds_content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: desc
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_button_wrapper:
+      children:
+        - node_link
+      label: 'Button Wrapper'
+      parent_name: group_grid_desc_wrapper
+      region: ds_content
+      weight: 5
+      format_type: html_element
+      format_settings:
+        classes: buttons-cont
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+  layout_builder:
+    sections: {  }
+id: node.blog_entry.homepage_teaser
+targetEntityType: node
+bundle: blog_entry
+mode: homepage_teaser
+content:
+  field_date:
+    type: datetime_custom
+    label: visually_hidden
+    settings:
+      timezone_override: ''
+      date_format: 'd M Y'
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_featured_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  field_summary:
+    type: text_trimmed
+    label: visually_hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 4
+    region: ds_content
+hidden:
+  body: true
+  field_author: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  links: true

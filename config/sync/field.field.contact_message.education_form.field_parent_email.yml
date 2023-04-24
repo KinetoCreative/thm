@@ -1,0 +1,19 @@
+uuid: a3a9a37b-9252-465e-93d1-358709e01ab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.education_form
+    - field.storage.contact_message.field_parent_email
+id: contact_message.education_form.field_parent_email
+field_name: field_parent_email
+entity_type: contact_message
+bundle: education_form
+label: 'Parent Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

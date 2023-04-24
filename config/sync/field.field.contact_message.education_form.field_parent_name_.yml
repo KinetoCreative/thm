@@ -1,0 +1,19 @@
+uuid: 60189f9e-8355-4479-92d6-5f22a0d88e27
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.education_form
+    - field.storage.contact_message.field_parent_name_
+id: contact_message.education_form.field_parent_name_
+field_name: field_parent_name_
+entity_type: contact_message
+bundle: education_form
+label: 'Parent Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

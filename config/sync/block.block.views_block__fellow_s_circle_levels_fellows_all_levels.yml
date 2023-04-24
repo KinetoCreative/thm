@@ -1,0 +1,30 @@
+uuid: c03a59cb-2b90-4946-a038-9ccc3ac48b52
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fellow_s_circle_levels
+  module:
+    - system
+    - views
+  theme:
+    - thm
+id: views_block__fellow_s_circle_levels_fellows_all_levels
+theme: thm
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:fellow_s_circle_levels-fellows_all_levels'
+settings:
+  id: 'views_block:fellow_s_circle_levels-fellows_all_levels'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '*'

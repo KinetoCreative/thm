@@ -1,0 +1,27 @@
+uuid: 5a18f6e6-8a3c-4c07-904c-a005aef65462
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_video
+    - node.type.educational_program
+  module:
+    - file
+id: node.educational_program.field_header_video
+field_name: field_header_video
+entity_type: node
+bundle: educational_program
+label: 'Header Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 avi webm'
+  max_filesize: ''
+  description_field: false
+field_type: file

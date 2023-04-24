@@ -1,0 +1,19 @@
+uuid: 25de8de5-ca4d-430d-a8ca-881b2313ca52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_title
+    - node.type.leadership_member
+id: node.leadership_member.field_job_title
+field_name: field_job_title
+entity_type: node
+bundle: leadership_member
+label: 'Job Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

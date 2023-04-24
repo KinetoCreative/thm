@@ -1,0 +1,21 @@
+uuid: 12937da4-d070-4f6d-a779-73f51afb478d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.educational_program
+  module:
+    - text
+id: node.educational_program.field_summary
+field_name: field_summary
+entity_type: node
+bundle: educational_program
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,432 @@
+.field--name-field-hero-slides{
+    &.field__items,
+    .field__items{
+        .field__item{
+            position:relative;
+            overflow:hidden;
+            img{
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            @extend .slider-image-overlay;
+
+            &.hide_overlay:after {
+                display:none;
+            }
+        }
+    }
+    &.hide_overlay .field__item:after {
+        display:none;
+    }
+    @media #{$break-max-1280}{
+        &.field__items{
+            .field__item{
+                min-height: 0px;
+            }
+        }
+    }
+    @media #{$break-max-1024}{
+        &.field__items{
+            .field__item{
+                min-height: 0px;
+            }
+        }
+    }
+    @media #{$break-max-768}{
+        &.field__items{
+            .field__item{
+                min-height: 0px;
+            }
+        }
+    }
+}
+
+.exhibit-hero{
+    position:relative;
+    margin:0 0 150px 0;
+    background:url(../images/birtdaypartypackages.jpg) $bc-yellow;
+    background-size:cover;
+    .field--name-field-hero-slides{
+
+    }
+    .copy-wrapper{
+        color: $bc-black;
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 800;
+        .field--name-node-title{
+            font-size:80px;
+            line-height: 80px;
+            font-family:$ff-gotham;
+            font-weight: $fw-ultra;
+            h1{
+                width:100%;
+            }
+        }
+        .field--name-field-hero-copy{
+            font-family:$ff-roboto;
+            font-size:20px;
+            line-height: 24px;
+            margin:10px auto 0px;
+            width:100%;
+            max-width:800px;
+
+        }
+    }
+    @media #{$break-max-1024}{
+        margin:0px auto 120px;
+        .copy-wrapper{
+            .field--name-node-title{
+                font-size:64px;
+                line-height: 64px;
+            }
+            .field--name-field-hero-copy{
+                font-size:18px;
+                line-height: 32px;
+            }
+        }
+    }
+    @media #{$break-max-768}{
+        margin:0px auto 80px;
+        .copy-wrapper{
+            .field--name-node-title{
+                font-size:52px;
+                line-height: 52px;
+            }
+            .field--name-field-hero-copy{
+                font-size:16px;
+                line-height: 32px;
+            }
+        }
+    }
+    @media #{$break-max-540}{
+        margin:0px auto 80px;
+        .copy-wrapper{
+            .field--name-node-title{
+                font-size:44px;
+                line-height: 44px;
+            }
+            .field--name-field-hero-copy{
+                font-size:14px;
+                line-height: 27px;
+            }
+        }
+    }
+}
+
+.path-frontpage .exhibit-hero .copy-wrapper{
+  color:$white;
+  position:absolute;
+  width:100%;
+  left:50%;
+  top:50%;
+  @include transform(translate(-50%,-50%));
+}
+
+.view-other-exhibits{
+    @extend .homepage-section-container-padded;
+    .view-header{
+        @extend .centered-h2-divided;
+    }
+    .view-content{
+        overflow:hidden;
+        margin-left:-20px;
+        display: block;
+        display:flex;
+        flex-wrap: wrap;
+        .views-row{
+            width:25%;
+            float:left;
+            padding-left:20px;
+            display: flex;
+            &>.node{
+                border:1px solid $bc-divider;
+            }
+
+            .field--name-field-featured-image{
+                img{
+                    width:100%;
+                    height:auto;
+                    display: block;
+                }
+            }
+            .details-wrapper{
+                padding:30px 30px;
+                min-height: 310px;
+                .field--name-node-title{
+
+                    font-family:$ff-gotham;
+                    font-size:27px;
+                    font-weight: 600;
+                    a{
+                        text-decoration: none;
+                        color:$bc-black;
+                    }
+                }
+                .field--name-field-summary{
+                    font-family:$ff-roboto;
+                    font-size:14px;
+                    line-height: 24px;
+                    font-weight: 300;
+                    color:$text-copy-light;
+                    margin:10px 0 0;
+                }
+                .field--name-node-link{
+                    @extend .more-link-btn;
+                }
+            }
+        }
+    }
+    @media #{$break-max-1180}{
+        .view-content{
+            overflow:hidden;
+            margin-left:-20px;
+            display: block;
+            display: flex;
+            .views-row{
+                width:50%;
+                float:left;
+                padding-left:20px;
+                margin:0 0 20px;
+            }
+        }
+    }
+    @media #{$break-max-768}{
+        .view-header{
+            &:before{
+                content:none;
+            }
+        }
+    }
+    @media #{$break-max-640}{
+        .view-content{
+            overflow:hidden;
+            margin:0px auto;
+            display: block;
+            .views-row{
+                width:100%;
+                float:none;
+                padding-left:0px;
+                margin:0 auto 20px;
+                max-width:440px;
+            }
+        }
+    }
+}
+
+/* All exhibits */
+
+.all-exhibits{
+    @extend .homepage-section-container-padded;
+    margin:60px auto 80px;
+    .view-content{
+        margin-left:-20px;
+        overflow:hidden;
+        display: flex;
+        flex-wrap: wrap;
+        .views-row{
+            width:25%;
+            padding-left:20px;
+            float:left;
+            margin-top:20px;
+            display: flex;
+
+            .node--type-educational-program,
+            .node--type-exhibit{
+                border:1px solid $bc-divider;
+                .field--name-field-featured-image{
+                    img{
+                        display: block;
+                        width:100%;
+                        height:auto;
+                    }
+                }
+                .details-wrapper{
+                    padding:30px;
+                    @extend .exhibit-details-wrapper;
+                }
+            }
+            &:nth-child(4n+1){
+                clear:left;
+            }
+        }
+    }
+    @media #{$break-max-1180}{
+        .view-content{
+            .views-row{
+                width:50%;
+            }
+        }
+    }
+    @media #{$break-max-540}{
+        .view-content{
+            display: block;
+            margin:0px auto;
+
+            .views-row{
+                width:100%;
+                padding:0px;
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+.paragraph--type-exhibit-brought-by{
+    text-align: center;
+    border-top:1px solid $bc-divider;
+    padding:60px 60px;
+    margin:120px 0 0;
+    .copy-wrapper{
+        display: inline-block;
+        vertical-align: middle;
+        width:100%;
+        max-width:1180px;
+        margin-right:-210px;
+        text-align: left;
+        padding-right:240px;
+        .field--name-field-sponsor-name{
+            font-size:32px;
+            line-height: 32px;
+            font-family: $ff-gotham;
+            font-weight: $fw-medium;
+            max-width:780px;
+        }
+        .field--name-field-content{
+            font-size:16px;
+            line-height: 24px;
+            font-family:$ff-roboto;
+            margin-top:15px;
+            color:$text-copy-light;
+            max-width:780px;
+            h2{
+                font-size: 32px;
+                font-family: gotham,Arial,Helvetica,sans-serif;
+                font-weight: 600;
+                margin: 60px auto 20px;
+                color: #000;
+            }
+        }
+    }
+    .field--name-field-logo{
+        display: inline-block;
+        vertical-align: middle;
+        width:200px;
+        overflow: hidden;
+        a{
+            display: block;
+            float:right;
+        }
+        img{
+            display: block;
+            float:right;
+        }
+
+    }
+    @media #{$break-max-768}{
+        .copy-wrapper{
+            width:100%;
+            padding:0px;
+            text-align: center;
+            margin:0px auto;
+            display: block;
+        }
+        .field--name-field-logo{
+            display: block;
+            width:100%;
+            text-align: center;
+            margin:20px auto 0;
+            a{
+                float:none;
+                margin:0px auto;
+            }
+            img{
+                float: none;
+                margin:0px auto;
+            }
+        }
+    }
+}
+
+.random-testimonials{
+    @extend .homepage-section-container-padded;
+    .view-header{
+        @extend .centered-h2-divided;
+        h2{
+
+        }
+    }
+    .view-content{
+        margin-left:-20px;
+        @extend .clearfix;
+        display: block;
+        display: flex;
+        .views-row{
+            width:33.33%;
+            padding-left:20px;
+            float:left;
+            display: block;
+            display: flex;
+            .node--type-testimonial{
+                border:1px solid $bc-divider;
+                padding:40px;
+                .field--name-body{
+                    color:$text-copy-light;
+                    font-size:14px;
+                    line-height: 36px;
+                    font-family:$ff-roboto;
+                    &:before{
+                        /*content:'“';*/
+                        font-family:$ff-gotham;
+                        color:$bc-cyan;
+                        font-weight: $fw-medium;
+                        font-size:82px;
+                        display: block;
+                        line-height: 52px;
+                    }
+                }
+                .field--name-field-author{
+                    text-align: right;
+                    font-size:22px;
+                    line-height: 22px;
+                    font-family:$ff-gotham;
+                    font-weight: $fw-bold;
+                    margin:30px auto 0;
+                    color:$text-black;
+                }
+            }
+        }
+        @media #{$break-max-1024}{
+            display:block;
+            .views-row{
+                width:100%;
+                display: block;
+                margin-bottom:20px;
+                .field--name-body{
+                    max-width:640px;
+                    margin:0px auto;
+                }
+                .field--name-field-author{
+                    max-width:640px;
+                    margin:30px auto 0;
+                }
+            }
+        }
+    }
+}
+
+.page-node-type-exhibit{
+    .field--name-body{
+        width:100%;
+        max-width:860px;
+        margin:0px auto;
+        font-size:16px;
+        line-height: 32px;
+    }
+}

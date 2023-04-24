@@ -1,0 +1,28 @@
+uuid: 5a9395dd-f6e9-473a-98c0-0ff8963c71b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leadership_type
+    - node.type.leadership_member
+    - taxonomy.vocabulary.leadership_type
+id: node.leadership_member.field_leadership_type
+field_name: field_leadership_type
+entity_type: node
+bundle: leadership_member
+label: 'Leadership Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      leadership_type: leadership_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

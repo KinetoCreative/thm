@@ -1,0 +1,18 @@
+uuid: dedf656f-cb0d-464c-9048-7e6252a8f3cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_sheep_brain
+field_name: field_sheep_brain
+entity_type: contact_message
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

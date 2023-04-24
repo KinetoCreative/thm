@@ -1,0 +1,124 @@
+uuid: 01eb30f0-ecc0-42cb-a6e0-f266f0696283
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_drop_down_content
+    - paragraphs.paragraphs_type.buttons
+    - paragraphs.paragraphs_type.drop_down_container
+    - paragraphs.paragraphs_type.drop_down_grid
+    - paragraphs.paragraphs_type.flexible_content
+    - paragraphs.paragraphs_type.full_width_content
+    - paragraphs.paragraphs_type.three_columns_photos
+    - paragraphs.paragraphs_type.title_centered
+    - paragraphs.paragraphs_type.title_left
+  module:
+    - entity_reference_revisions
+id: paragraph.drop_down_container.field_drop_down_content
+field_name: field_drop_down_content
+entity_type: paragraph
+bundle: drop_down_container
+label: 'Drop down content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      buttons: buttons
+      flexible_content: flexible_content
+      drop_down_grid: drop_down_grid
+      full_width_content: full_width_content
+      three_columns_photos: three_columns_photos
+      title_centered: title_centered
+      title_left: title_left
+    negate: 0
+    target_bundles_drag_drop:
+      block_list:
+        weight: 22
+        enabled: false
+      buttons:
+        weight: 23
+        enabled: true
+      column_blocks_2_1:
+        weight: 24
+        enabled: false
+      contact_form:
+        weight: 25
+        enabled: false
+      contact_form_and_content:
+        weight: 26
+        enabled: false
+      contained_content:
+        weight: 27
+        enabled: false
+      contextual_boxes:
+        weight: 28
+        enabled: false
+      drop_down_container:
+        weight: 29
+        enabled: false
+      drop_down_grid:
+        weight: 38
+        enabled: true
+      dropdown_grid_content_item:
+        weight: 36
+        enabled: false
+      exhibit_brought_by:
+        weight: 30
+        enabled: false
+      flexible_content:
+        weight: 31
+        enabled: true
+      full_width_content:
+        weight: 41
+        enabled: true
+      header:
+        weight: 32
+        enabled: false
+      narrow_header:
+        weight: 33
+        enabled: false
+      non_custom_block_list:
+        weight: 34
+        enabled: false
+      page_content:
+        weight: 35
+        enabled: false
+      page_sections_with_sidebar:
+        weight: 46
+        enabled: false
+      program_classes:
+        weight: 36
+        enabled: false
+      sidebar_and_blocklist:
+        weight: 37
+        enabled: false
+      sidebar_and_content:
+        weight: 38
+        enabled: false
+      sidebar_block_lists:
+        weight: 39
+        enabled: false
+      slider_header:
+        weight: 40
+        enabled: false
+      three_columns_blocks:
+        weight: 41
+        enabled: false
+      three_columns_photos:
+        weight: 53
+        enabled: true
+      title_centered:
+        weight: 54
+        enabled: true
+      title_left:
+        weight: 55
+        enabled: true
+      useful_docs:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

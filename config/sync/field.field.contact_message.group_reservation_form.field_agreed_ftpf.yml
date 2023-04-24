@@ -1,0 +1,23 @@
+uuid: b3a10ba5-62d7-4a9c-90fe-ba6e552ff5f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.group_reservation_form
+    - field.storage.contact_message.field_agreed_ftpf
+id: contact_message.group_reservation_form.field_agreed_ftpf
+field_name: field_agreed_ftpf
+entity_type: contact_message
+bundle: group_reservation_form
+label: 'Agreed ftpf'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'I have read and agree to Field Trip Payment form'
+  off_label: 'I have read and agree to Field Trip Payment form'
+field_type: boolean

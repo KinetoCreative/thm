@@ -1,0 +1,21 @@
+uuid: 36e16495-5d06-401e-aefe-3d11ee0eda71
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_1st_choice_date
+  module:
+    - datetime
+id: contact_message.field_trip.field_1st_choice_date
+field_name: field_1st_choice_date
+entity_type: contact_message
+bundle: field_trip
+label: '1st Choice Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,91 @@
+uuid: 63b1d8ec-dcf5-425d-bbed-4d93d56ee484
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.webform.body
+    - field.field.node.webform.field_page_sections
+    - field.field.node.webform.field_webform
+    - node.type.webform
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+    - webform
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - group_main_content_container
+        - field_page_sections
+        - body
+        - field_webform
+  field_group:
+    group_main_content_container:
+      children:
+        - field_page_sections
+        - body
+        - field_webform
+      label: 'Main Content Container'
+      parent_name: ''
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: main-content-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.webform.default
+targetEntityType: node
+bundle: webform
+mode: default
+content:
+  body:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: ds_content
+  field_page_sections:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 23
+    region: ds_content
+  field_webform:
+    type: webform_entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 25
+    region: ds_content
+hidden:
+  links: true

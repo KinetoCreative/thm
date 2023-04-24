@@ -1,0 +1,105 @@
+uuid: 066b7a26-df45-434b-b327-52d7a311c22a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_sections
+    - node.type.exhibit
+    - paragraphs.paragraphs_type.block_list
+    - paragraphs.paragraphs_type.column_blocks_2_1
+    - paragraphs.paragraphs_type.contextual_boxes
+    - paragraphs.paragraphs_type.exhibit_brought_by
+    - paragraphs.paragraphs_type.flexible_content
+    - paragraphs.paragraphs_type.header
+    - paragraphs.paragraphs_type.narrow_header
+    - paragraphs.paragraphs_type.non_custom_block_list
+    - paragraphs.paragraphs_type.page_content
+    - paragraphs.paragraphs_type.sidebar_and_content
+    - paragraphs.paragraphs_type.sidebar_block_lists
+    - paragraphs.paragraphs_type.slider_header
+    - paragraphs.paragraphs_type.three_columns_blocks
+  module:
+    - entity_reference_revisions
+id: node.exhibit.field_page_sections
+field_name: field_page_sections
+entity_type: node
+bundle: exhibit
+label: 'Page Sections'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      sidebar_and_content: sidebar_and_content
+      block_list: block_list
+      column_blocks_2_1: column_blocks_2_1
+      contextual_boxes: contextual_boxes
+      exhibit_brought_by: exhibit_brought_by
+      flexible_content: flexible_content
+      narrow_header: narrow_header
+      non_custom_block_list: non_custom_block_list
+      page_content: page_content
+      sidebar_block_lists: sidebar_block_lists
+      slider_header: slider_header
+      three_columns_blocks: three_columns_blocks
+      header: header
+    target_bundles_drag_drop:
+      block_list:
+        weight: 3
+        enabled: true
+      column_blocks_2_1:
+        weight: 14
+        enabled: true
+      contact_form:
+        weight: 21
+        enabled: false
+      contact_form_and_content:
+        weight: 22
+        enabled: false
+      contained_content:
+        weight: 23
+        enabled: false
+      contextual_boxes:
+        weight: 15
+        enabled: true
+      exhibit_brought_by:
+        weight: 16
+        enabled: true
+      flexible_content:
+        weight: 17
+        enabled: true
+      header:
+        weight: 27
+        enabled: true
+      narrow_header:
+        weight: 18
+        enabled: true
+      non_custom_block_list:
+        weight: 19
+        enabled: true
+      page_content:
+        weight: 20
+        enabled: true
+      program_classes:
+        weight: 31
+        enabled: false
+      sidebar_and_content:
+        weight: 2
+        enabled: true
+      sidebar_block_lists:
+        weight: 22
+        enabled: true
+      slider_header:
+        weight: 23
+        enabled: true
+      three_columns_blocks:
+        weight: 24
+        enabled: true
+      useful_docs:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

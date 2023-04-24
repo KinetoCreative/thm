@@ -1,0 +1,54 @@
+uuid: c703ddc6-cfce-49a2-b32e-f86a6b4e3f7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_page_parent_header
+    - block_content.type.contextual_boxes
+    - block_content.type.cta_visual_boxes
+    - block_content.type.custom_menu_subtree
+    - block_content.type.directions
+    - block_content.type.faq_list
+    - block_content.type.full_width_cta
+    - block_content.type.homepage_exhibits
+    - block_content.type.map
+    - block_content.type.newsletter_signup
+    - block_content.type.plan_your_visit
+    - block_content.type.quick_info_box
+    - block_content.type.short_textarea
+    - block_content.type.visit_info_box
+    - field.storage.paragraph.field_blocks
+    - paragraphs.paragraphs_type.sidebar_block_lists
+id: paragraph.sidebar_block_lists.field_blocks
+field_name: field_blocks
+entity_type: paragraph
+bundle: sidebar_block_lists
+label: Blocks
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      cta_visual_boxes: cta_visual_boxes
+      content_page_parent_header: content_page_parent_header
+      contextual_boxes: contextual_boxes
+      custom_menu_subtree: custom_menu_subtree
+      directions: directions
+      faq_list: faq_list
+      full_width_cta: full_width_cta
+      homepage_exhibits: homepage_exhibits
+      map: map
+      newsletter_signup: newsletter_signup
+      plan_your_visit: plan_your_visit
+      quick_info_box: quick_info_box
+      short_textarea: short_textarea
+      visit_info_box: visit_info_box
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: cta_visual_boxes
+field_type: entity_reference

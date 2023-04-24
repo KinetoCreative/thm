@@ -1,0 +1,19 @@
+uuid: c2ae24f5-6f7c-4b6e-b9d2-a79ec41df98d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.education_form
+    - field.storage.contact_message.field_parent_mobile_number_or_da
+id: contact_message.education_form.field_parent_mobile_number_or_da
+field_name: field_parent_mobile_number_or_da
+entity_type: contact_message
+bundle: education_form
+label: 'Parent mobile number or daytime phone number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

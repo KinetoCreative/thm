@@ -1,0 +1,21 @@
+uuid: 67cf0e98-1d8b-4700-9b3f-5a6489953143
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_how_many_chaperones_one_fr
+field_name: field_how_many_chaperones_one_fr
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

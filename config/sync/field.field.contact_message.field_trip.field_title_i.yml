@@ -1,0 +1,21 @@
+uuid: 53c545d3-68bc-4a11-9e31-2a50ba16d44a
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_title_i
+  module:
+    - options
+id: contact_message.field_trip.field_title_i
+field_name: field_title_i
+entity_type: contact_message
+bundle: field_trip
+label: 'Title I'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

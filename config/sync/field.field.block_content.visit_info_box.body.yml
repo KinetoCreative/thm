@@ -1,0 +1,23 @@
+uuid: e830d85e-e08e-4dca-8d35-f280b8b2dbdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.visit_info_box
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.visit_info_box.body
+field_name: body
+entity_type: block_content
+bundle: visit_info_box
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

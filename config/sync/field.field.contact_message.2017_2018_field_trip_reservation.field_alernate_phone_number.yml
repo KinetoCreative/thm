@@ -1,0 +1,21 @@
+uuid: 04d10af1-f445-429f-971a-53275980e166
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_reservation
+    - field.storage.contact_message.field_alernate_phone_number
+  module:
+    - telephone
+id: contact_message.2017_2018_field_trip_reservation.field_alernate_phone_number
+field_name: field_alernate_phone_number
+entity_type: contact_message
+bundle: 2017_2018_field_trip_reservation
+label: 'Phone number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

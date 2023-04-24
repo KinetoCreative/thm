@@ -1,0 +1,19 @@
+uuid: 62a1f463-c450-4443-a332-a74f865c61ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.program_interest_form
+    - field.storage.contact_message.field_phone
+id: contact_message.program_interest_form.field_phone
+field_name: field_phone
+entity_type: contact_message
+bundle: program_interest_form
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

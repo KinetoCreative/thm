@@ -1,0 +1,37 @@
+uuid: a7d18911-76e8-412c-9f53-a5ed5004243b
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.linkit_result_thumbnail
+  module:
+    - file
+    - image
+    - node
+label: 'CK Editor'
+id: ck_editor
+description: ''
+matchers:
+  41ca0504-f5a0-4342-acde-539687e54350:
+    id: 'entity:file'
+    uuid: 41ca0504-f5a0-4342-acde-539687e54350
+    settings:
+      metadata: ''
+      bundles: null
+      group_by_bundle: null
+      substitution_type: file
+      images:
+        show_dimensions: true
+        show_thumbnail: true
+        thumbnail_image_style: linkit_result_thumbnail
+    weight: 0
+  274959f5-4cf8-4467-937d-fdef794aae71:
+    id: 'entity:node'
+    uuid: 274959f5-4cf8-4467-937d-fdef794aae71
+    settings:
+      metadata: ''
+      bundles: {  }
+      group_by_bundle: false
+      substitution_type: canonical
+      include_unpublished: false
+    weight: 0

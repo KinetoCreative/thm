@@ -1,0 +1,18 @@
+uuid: 6b1f872a-2259-49af-b16d-3bcda9569718
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_order_souvenir_bags
+field_name: field_order_souvenir_bags
+entity_type: contact_message
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

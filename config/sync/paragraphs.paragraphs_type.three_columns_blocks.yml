@@ -1,0 +1,6 @@
+uuid: d5e23b36-c182-4f7d-87f8-629536c609b6
+langcode: en
+status: true
+dependencies: {  }
+id: three_columns_blocks
+label: 'Three columns - blocks'

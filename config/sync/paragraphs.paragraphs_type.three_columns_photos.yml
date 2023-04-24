@@ -1,0 +1,10 @@
+uuid: fc15da34-8c72-45a2-8d88-361100cd7a8a
+langcode: en
+status: true
+dependencies: {  }
+id: three_columns_photos
+label: 'Three Columns Photos'
+icon_uuid: null
+icon_default: null
+description: 'Three square photos in a row'
+behavior_plugins: {  }

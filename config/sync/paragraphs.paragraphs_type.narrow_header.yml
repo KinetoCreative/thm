@@ -1,0 +1,6 @@
+uuid: 056fa6b2-cacd-4792-b6d2-9add49e69a3e
+langcode: en
+status: true
+dependencies: {  }
+id: narrow_header
+label: 'Narrow Header'

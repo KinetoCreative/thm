@@ -1,0 +1,118 @@
+uuid: a069ccb0-8838-41db-8bf8-eedf5b3ca6b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_block_lists.field_block_ids
+    - field.field.paragraph.sidebar_block_lists.field_blocks
+    - field.field.paragraph.sidebar_block_lists.field_content
+    - field.field.paragraph.sidebar_block_lists.field_custom_blocks
+    - field.field.paragraph.sidebar_block_lists.field_sidebar_boxes
+    - paragraphs.paragraphs_type.sidebar_block_lists
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - text
+third_party_settings:
+  field_group:
+    group_content_wrapper:
+      children:
+        - field_content
+        - field_blocks
+        - field_custom_blocks
+        - field_block_ids
+      label: 'Content wrapper'
+      parent_name: ''
+      region: ds_content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Content wrapper'
+        classes: ''
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - field_sidebar_boxes
+        - group_content_wrapper
+        - field_content
+        - field_blocks
+        - field_custom_blocks
+        - field_block_ids
+  layout_builder:
+    enabled: false
+    allow_custom: false
+    sections: {  }
+id: paragraph.sidebar_block_lists.default
+targetEntityType: paragraph
+bundle: sidebar_block_lists
+mode: default
+content:
+  field_block_ids:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: ds_content
+  field_blocks:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: ds_content
+  field_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: ds_content
+  field_custom_blocks:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: ds_content
+  field_sidebar_boxes:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    weight: 0
+    region: ds_content
+hidden:
+  created: true
+  uid: true

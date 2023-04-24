@@ -1,0 +1,15 @@
+uuid: 0f7f2d94-5279-43a1-aaf5-1892ae7eb6a2
+langcode: en
+status: true
+dependencies: {  }
+name: hero_slide_1920_x_980_
+label: 'Hero Slide (1920 x 600)'
+effects:
+  b0cf1d59-05db-4621-9017-f885c2d15ea0:
+    uuid: b0cf1d59-05db-4621-9017-f885c2d15ea0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 600
+      anchor: center-center

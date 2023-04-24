@@ -1,0 +1,21 @@
+uuid: e204dc5c-16be-4862-8dff-08b9d3b37583
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_reservation
+    - field.storage.contact_message.field_3rd_choice
+  module:
+    - datetime
+id: contact_message.2017_2018_field_trip_reservation.field_3rd_choice
+field_name: field_3rd_choice
+entity_type: contact_message
+bundle: 2017_2018_field_trip_reservation
+label: '3rd Choice Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

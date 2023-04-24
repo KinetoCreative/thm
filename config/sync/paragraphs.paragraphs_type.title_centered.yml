@@ -1,0 +1,10 @@
+uuid: 7eed83f4-577d-4a30-b9fd-0af3e94f076c
+langcode: en
+status: true
+dependencies: {  }
+id: title_centered
+label: 'Title Centered'
+icon_uuid: null
+icon_default: null
+description: 'Title with h2 style, centered'
+behavior_plugins: {  }

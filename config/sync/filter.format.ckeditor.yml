@@ -1,0 +1,101 @@
+uuid: 1f26c890-9a1a-437e-89b3-5ff6b057914e
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - entity_embed
+    - linkit
+    - media
+    - no_nbsp
+name: CKEditor
+format: ckeditor
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -45
+    settings:
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <h1> <u> <ul type class="styled-column-list full-width two-column-list"> <p class="important-small-print important-contextual-info heading-small-print heading-important-top heading-important-bottom heading-price-bottom heading-important-meta large-important-text important-paragraph form-group-description"> <div class="form-disclaimer"> <img src alt data-entity-type data-entity-uuid data-entity-substitution data-align data-caption> <sup> <sub> <pre> <label> <drupal-entity data-entity-type data-entity-uuid data-entity-substitution data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode alt title> <hr> <a href hreflang !href accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution class="button thm-button">'
+      filter_html_help: true
+      filter_html_nofollow: true
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: -47
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: -49
+    settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -50
+    settings:
+      title: false
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: false
+    weight: -43
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -39
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -44
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -41
+    settings:
+      filter_url_length: 72
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: false
+    weight: -48
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -40
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -42
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: -38
+    settings:
+      default_view_mode: default
+      allowed_view_modes: {  }
+      allowed_media_types: {  }
+  filter_no_nbsp:
+    id: filter_no_nbsp
+    provider: no_nbsp
+    status: true
+    weight: 0
+    settings:
+      preserve_placeholders: '0'

@@ -1,0 +1,23 @@
+uuid: 27f0aecd-37a0-40a2-bcc0-5dad715d3f74
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_souvenir_bags
+id: contact_message.field_trip.field_souvenir_bags
+field_name: field_souvenir_bags
+entity_type: contact_message
+bundle: field_trip
+label: 'Souvenir Bags'
+description: 'Would you like to pre-order souvenir bags? ($4 each) They are a $7 value for only $4 per child. This is a fun and efficient way for children to take home souvenirs. Our souvenir bags contain a logo pencil, a silly pen, a brain-teaser puzzle, and a very funny kid-pleasing nose pencil sharpener.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

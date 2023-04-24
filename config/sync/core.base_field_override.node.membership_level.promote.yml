@@ -1,0 +1,22 @@
+uuid: c9838a46-e17f-437f-a089-2fa0aef3a1eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.membership_level
+id: node.membership_level.promote
+field_name: promote
+entity_type: node
+bundle: membership_level
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

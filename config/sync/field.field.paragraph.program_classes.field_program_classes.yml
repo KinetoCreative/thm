@@ -1,0 +1,28 @@
+uuid: 5dd36ac7-474e-460f-947b-a9768905ed45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_program_classes
+    - node.type.program_class
+    - paragraphs.paragraphs_type.program_classes
+id: paragraph.program_classes.field_program_classes
+field_name: field_program_classes
+entity_type: paragraph
+bundle: program_classes
+label: 'Program Classes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program_class: program_class
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

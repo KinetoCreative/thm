@@ -1,0 +1,21 @@
+uuid: ed24ddfb-804a-4811-8830-f48f43af8b1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_interest_form_copy
+    - node.type.educational_program
+  module:
+    - text
+id: node.educational_program.field_interest_form_copy
+field_name: field_interest_form_copy
+entity_type: node
+bundle: educational_program
+label: 'Interest Form Copy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

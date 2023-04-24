@@ -1,0 +1,259 @@
+uuid: f7372620-dd7f-4027-95a4-ac9a624efa88
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.health_adventure
+    - field.field.contact_message.health_adventure.field_1st_choice_date
+    - field.field.contact_message.health_adventure.field_2nd_choice_date
+    - field.field.contact_message.health_adventure.field_auditorium_usage
+    - field.field.contact_message.health_adventure.field_choose_preferred_start_tim
+    - field.field.contact_message.health_adventure.field_educators_newsletter
+    - field.field.contact_message.health_adventure.field_email
+    - field.field.contact_message.health_adventure.field_extra_classes
+    - field.field.contact_message.health_adventure.field_field_extra_classes_list
+    - field.field.contact_message.health_adventure.field_firstname
+    - field.field.contact_message.health_adventure.field_grade_level_of_students
+    - field.field.contact_message.health_adventure.field_how_did_you_hear_about_the
+    - field.field.contact_message.health_adventure.field_lastname
+    - field.field.contact_message.health_adventure.field_mobile_phone_number
+    - field.field.contact_message.health_adventure.field_no_students_participating
+    - field.field.contact_message.health_adventure.field_school_address
+    - field.field.contact_message.health_adventure.field_school_district
+    - field.field.contact_message.health_adventure.field_school_fax_number
+    - field.field.contact_message.health_adventure.field_school_name
+    - field.field.contact_message.health_adventure.field_school_phone
+    - field.field.contact_message.health_adventure.field_which_class_would_you_like
+  module:
+    - datetime
+    - field_group
+    - telephone
+third_party_settings:
+  field_group:
+    group_contact_information:
+      children:
+        - field_firstname
+        - field_lastname
+        - field_email
+        - field_mobile_phone_number
+      label: 'Contact Information'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+    group_school_information:
+      children:
+        - field_school_name
+        - field_school_district
+        - field_grade_level_of_students
+        - field_no_students_participating
+        - field_school_address
+        - field_school_phone
+        - field_school_fax_number
+        - field_educators_newsletter
+      label: 'School Information'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+    group_program_information:
+      children:
+        - field_1st_choice_date
+        - field_2nd_choice_date
+        - field_choose_preferred_start_tim
+        - field_which_class_would_you_like
+        - field_extra_classes
+        - field_field_extra_classes_list
+        - field_auditorium_usage
+        - field_how_did_you_hear_about_the
+      label: 'Program Information'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+id: contact_message.health_adventure.default
+targetEntityType: contact_message
+bundle: health_adventure
+mode: default
+content:
+  field_1st_choice_date:
+    type: datetime_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_2nd_choice_date:
+    type: datetime_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_auditorium_usage:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_choose_preferred_start_tim:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_educators_newsletter:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_extra_classes:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_field_extra_classes_list:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_firstname:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_grade_level_of_students:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_how_did_you_hear_about_the:
+    type: options_buttons
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lastname:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mobile_phone_number:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_no_students_participating:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_address:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_district:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_fax_number:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_name:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_phone:
+    type: telephone_default
+    weight: 15
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_which_class_would_you_like:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  preview: true
+  subject: true

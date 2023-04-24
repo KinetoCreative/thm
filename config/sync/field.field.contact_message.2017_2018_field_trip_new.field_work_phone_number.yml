@@ -1,0 +1,21 @@
+uuid: ad6f38ba-b8c1-4bc8-8d86-76af2ecf0f66
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_work_phone_number
+  module:
+    - telephone
+id: contact_message.2017_2018_field_trip_new.field_work_phone_number
+field_name: field_work_phone_number
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'Contact Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

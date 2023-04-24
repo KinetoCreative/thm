@@ -1,0 +1,19 @@
+uuid: d47fbc96-114f-4018-91c5-0cb7ce37d7d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_in_person_field_trip
+    - field.storage.contact_message.field_school_name
+id: contact_message.2020_21_in_person_field_trip.field_school_name
+field_name: field_school_name
+entity_type: contact_message
+bundle: 2020_21_in_person_field_trip
+label: 'School Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

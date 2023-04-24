@@ -1,0 +1,19 @@
+uuid: f491b221-0a0f-4cb2-994a-a5e439e93817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sponsor_name
+    - paragraphs.paragraphs_type.exhibit_brought_by
+id: paragraph.exhibit_brought_by.field_sponsor_name
+field_name: field_sponsor_name
+entity_type: paragraph
+bundle: exhibit_brought_by
+label: 'Sponsor name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

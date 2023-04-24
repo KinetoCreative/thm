@@ -1,0 +1,46 @@
+uuid: 134bbd1f-1887-4146-b1c9-df2eb8b397bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_visual_boxes
+    - block_content.type.custom_menu_subtree
+    - block_content.type.directions
+    - block_content.type.full_width_cta
+    - block_content.type.homepage_exhibits
+    - block_content.type.map
+    - block_content.type.plan_your_visit
+    - block_content.type.quick_info_box
+    - block_content.type.short_textarea
+    - block_content.type.visit_info_box
+    - field.storage.paragraph.field_sidebar_boxes
+    - paragraphs.paragraphs_type.sidebar_and_blocklist
+id: paragraph.sidebar_and_blocklist.field_sidebar_boxes
+field_name: field_sidebar_boxes
+entity_type: paragraph
+bundle: sidebar_and_blocklist
+label: 'Sidebar Boxes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      cta_visual_boxes: cta_visual_boxes
+      custom_menu_subtree: custom_menu_subtree
+      directions: directions
+      full_width_cta: full_width_cta
+      homepage_exhibits: homepage_exhibits
+      map: map
+      plan_your_visit: plan_your_visit
+      quick_info_box: quick_info_box
+      short_textarea: short_textarea
+      visit_info_box: visit_info_box
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: cta_visual_boxes
+field_type: entity_reference

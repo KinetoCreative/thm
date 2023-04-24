@@ -1,0 +1,21 @@
+uuid: 4eeeaa85-d267-43d6-9906-b040c8b98062
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_in_person_field_trip
+    - field.storage.contact_message.field_grade_level
+  module:
+    - options
+id: contact_message.2020_21_in_person_field_trip.field_grade_level
+field_name: field_grade_level
+entity_type: contact_message
+bundle: 2020_21_in_person_field_trip
+label: 'Grade Level'
+description: 'If multiple grades, please list them all and specify how many students are in each grade. Include only the students who will be attending the field trip.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

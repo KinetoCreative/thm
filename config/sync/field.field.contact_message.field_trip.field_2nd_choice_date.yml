@@ -1,0 +1,21 @@
+uuid: 247011c0-b702-47de-b989-bfa93f88ff18
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_2nd_choice_date
+  module:
+    - datetime
+id: contact_message.field_trip.field_2nd_choice_date
+field_name: field_2nd_choice_date
+entity_type: contact_message
+bundle: field_trip
+label: '2nd Choice Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

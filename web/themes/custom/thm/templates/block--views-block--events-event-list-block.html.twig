@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+    set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <div class="custom-view-filters for-events">
+            <div class="calendar-container">
+                <p class="title">Pick a date</p>
+                <div class="pick-event-date-container"></div>
+                <span class="filter-events-btn">Filter events</span>
+            </div>
+            <div class="events-intervals-tabs">
+                <ul>
+                    <li data-value="-1" class="active">Featured</li>
+                    <li data-value="7">This Week</li>
+                    <li data-value="31">This Month</li>
+                    <li data-value="1000">Upcoming</li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="search-text" name="search-text" />
+                <button type="submit" value="" class="filter-submit-btn"></button>
+            </div>
+        </div>
+        {{ content }}
+    {% endblock %}
+</div>

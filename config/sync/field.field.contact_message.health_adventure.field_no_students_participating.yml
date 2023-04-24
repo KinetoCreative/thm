@@ -1,0 +1,23 @@
+uuid: 8f8da90c-0509-4f43-81cd-be7cb683bdc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.health_adventure
+    - field.storage.contact_message.field_no_students_participating
+id: contact_message.health_adventure.field_no_students_participating
+field_name: field_no_students_participating
+entity_type: contact_message
+bundle: health_adventure
+label: 'Number of Students Participating'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

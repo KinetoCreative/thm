@@ -1,0 +1,139 @@
+uuid: c4e54886-056f-4c73-9b09-efd2e9a22a87
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.homepage_teaser
+    - field.field.node.homepage.body
+    - field.field.node.homepage.field_header_copy
+    - field.field.node.homepage.field_header_video
+    - field.field.node.homepage.field_header_video_cover
+    - field.field.node.homepage.field_hero_copy
+    - field.field.node.homepage.field_hero_links
+    - field.field.node.homepage.field_hero_slides
+    - field.field.node.homepage.field_hide_overlay
+    - field.field.node.homepage.field_homepage_image
+    - field.field.node.homepage.field_meta_tags
+    - field.field.node.homepage.field_yoast_seo
+    - node.type.homepage
+  module:
+    - ds
+    - field_group
+    - file
+    - image
+    - metatag
+    - text
+    - user
+    - yoast_seo
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - group_header_video_container
+        - body
+        - field_header_video_cover
+        - field_header_video
+        - field_header_copy
+  field_group:
+    group_header_video_container:
+      children:
+        - field_header_video_cover
+        - field_header_video
+        - field_header_copy
+      label: 'Header Video Container'
+      parent_name: ''
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Header Video Container'
+        classes: header-video-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.homepage.homepage_teaser
+targetEntityType: node
+bundle: homepage
+mode: homepage_teaser
+content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: ds_content
+  field_header_copy:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: ds_content
+  field_header_video:
+    type: file_url_plain
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: ds_content
+  field_header_video_cover:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 6
+    region: ds_content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_yoast_seo:
+    type: yoastseo_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_hero_copy: true
+  field_hero_links: true
+  field_hero_slides: true
+  field_hide_overlay: true
+  field_homepage_image: true

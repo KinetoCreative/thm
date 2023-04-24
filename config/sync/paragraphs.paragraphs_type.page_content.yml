@@ -1,0 +1,6 @@
+uuid: 2f1b762d-1868-4f1e-a854-cd556c45b28e
+langcode: en
+status: true
+dependencies: {  }
+id: page_content
+label: 'Page Content'

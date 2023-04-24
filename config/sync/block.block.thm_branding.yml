@@ -1,0 +1,30 @@
+uuid: e20fcec9-5b8a-40d0-b77f-82615e421f12
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - thm
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: thm_branding
+theme: thm
+region: header
+weight: -10
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '*'

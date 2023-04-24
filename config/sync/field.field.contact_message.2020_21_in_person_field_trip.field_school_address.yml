@@ -1,0 +1,19 @@
+uuid: cfe9dfc6-f581-4721-b7fd-c156f3064875
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_in_person_field_trip
+    - field.storage.contact_message.field_school_address
+id: contact_message.2020_21_in_person_field_trip.field_school_address
+field_name: field_school_address
+entity_type: contact_message
+bundle: 2020_21_in_person_field_trip
+label: 'School Address'
+description: 'Including city, state, zip code'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,105 @@
+uuid: d3b5f7db-02c2-480e-bbb2-bdd0ea176df2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_form_and_content.field_contact_form
+    - field.field.paragraph.contact_form_and_content.field_contact_form_text
+    - field.field.paragraph.contact_form_and_content.field_content
+    - field.field.paragraph.contact_form_and_content.field_form_layout
+    - paragraphs.paragraphs_type.contact_form_and_content
+  module:
+    - ds
+    - field_group
+    - options
+    - text
+third_party_settings:
+  field_group:
+    group_content_container:
+      children:
+        - field_content
+      label: 'Content container'
+      parent_name: ''
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: content-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_sidebar:
+      children:
+        - field_contact_form
+      label: Sidebar
+      parent_name: ''
+      region: ds_content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: sidebar
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - group_content_container
+        - group_sidebar
+        - field_contact_form
+        - field_content
+id: paragraph.contact_form_and_content.default
+targetEntityType: paragraph
+bundle: contact_form_and_content
+mode: default
+content:
+  field_contact_form:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  field_form_layout:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  created: true
+  field_contact_form_text: true
+  uid: true

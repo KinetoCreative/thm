@@ -1,0 +1,20 @@
+uuid: 8495bc22-fa61-438f-98ca-7a043800fee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - taxonomy
+id: contact_message.field_program_selection
+field_name: field_program_selection
+entity_type: contact_message
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: a1e681c8-f9f4-400b-a240-2c3d65d4e2cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_lastname
+id: contact_message.2017_2018_field_trip_new.field_lastname
+field_name: field_lastname
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'Last Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

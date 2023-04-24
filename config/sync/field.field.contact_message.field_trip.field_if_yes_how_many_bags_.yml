@@ -1,0 +1,23 @@
+uuid: 885820a6-7ee5-4802-b863-ca1db04cc72f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_if_yes_how_many_bags_
+id: contact_message.field_trip.field_if_yes_how_many_bags_
+field_name: field_if_yes_how_many_bags_
+entity_type: contact_message
+bundle: field_trip
+label: 'If yes, how many bags?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

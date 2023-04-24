@@ -1,0 +1,27 @@
+uuid: 4ac97508-0d1e-488d-9b45-8e1c80195e17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_video
+    - node.type.homepage
+  module:
+    - file
+id: node.homepage.field_header_video
+field_name: field_header_video
+entity_type: node
+bundle: homepage
+label: 'Header Video'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 avi webm'
+  max_filesize: ''
+  description_field: false
+field_type: file

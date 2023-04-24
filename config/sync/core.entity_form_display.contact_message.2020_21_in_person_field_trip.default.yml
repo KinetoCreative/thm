@@ -1,0 +1,109 @@
+uuid: 74243e55-89f4-43c7-adf6-24b27fa2c175
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_in_person_field_trip
+    - field.field.contact_message.2020_21_in_person_field_trip.field_email
+    - field.field.contact_message.2020_21_in_person_field_trip.field_first_and_last_name
+    - field.field.contact_message.2020_21_in_person_field_trip.field_grade_level
+    - field.field.contact_message.2020_21_in_person_field_trip.field_school_address
+    - field.field.contact_message.2020_21_in_person_field_trip.field_school_name
+    - field.field.contact_message.2020_21_in_person_field_trip.field_school_phone
+    - field.field.contact_message.2020_21_in_person_field_trip.field_work_phone_number
+  module:
+    - telephone
+id: contact_message.2020_21_in_person_field_trip.default
+targetEntityType: contact_message
+bundle: 2020_21_in_person_field_trip
+mode: default
+content:
+  copy:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 52
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_first_and_last_name:
+    type: string_textfield
+    weight: 51
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_grade_level:
+    type: options_select
+    weight: 57
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_school_address:
+    type: string_textfield
+    weight: 55
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_name:
+    type: string_textfield
+    weight: 54
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_phone:
+    type: telephone_default
+    weight: 56
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_work_phone_number:
+    type: telephone_default
+    weight: 53
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  mail:
+    weight: -40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 12
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    weight: -50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  preview:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

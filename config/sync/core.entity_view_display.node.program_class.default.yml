@@ -1,0 +1,185 @@
+uuid: afa17edc-1737-4fff-8355-fe9ce67a544c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program_class.body
+    - field.field.node.program_class.field_image
+    - field.field.node.program_class.field_link_url
+    - field.field.node.program_class.field_meta_tags
+    - field.field.node.program_class.field_price
+    - field.field.node.program_class.field_program_form
+    - field.field.node.program_class.field_summary
+    - field.field.node.program_class.field_yoast_seo
+    - node.type.program_class
+  module:
+    - ds
+    - field_group
+    - metatag
+    - text
+    - user
+    - yoast_seo
+third_party_settings:
+  field_group:
+    group_class_footer:
+      children: {  }
+      label: 'Class Footer'
+      parent_name: ''
+      region: hidden
+      weight: 16
+      format_type: html_element
+      format_settings:
+        classes: class-footer
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_header:
+      children:
+        - node_title
+      label: Header
+      parent_name: group_main_content_container
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: header-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_main_content_container:
+      children:
+        - group_header
+        - group_content_container
+      label: 'Main content container'
+      parent_name: ''
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: main-content-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_content_container:
+      children:
+        - body
+      label: 'Content container'
+      parent_name: group_main_content_container
+      region: ds_content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: content-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_sidebar:
+      children:
+        - field_program_form
+      label: Sidebar
+      parent_name: ''
+      region: hidden
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: class-sidebar
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - group_main_content_container
+        - group_header
+        - body
+        - node_title
+        - group_content_container
+        - field_program_form
+        - field_meta_tags
+        - field_yoast_seo
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          wrapper: h1
+          class: ''
+id: node.program_class.default
+targetEntityType: node
+bundle: program_class
+mode: default
+content:
+  body:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: ds_content
+  field_program_form:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: program
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: ds_content
+  field_yoast_seo:
+    type: yoastseo_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: ds_content
+hidden:
+  addtoany: true
+  field_image: true
+  field_link_url: true
+  field_price: true
+  field_summary: true
+  links: true

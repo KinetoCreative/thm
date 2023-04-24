@@ -1,0 +1,22 @@
+uuid: 15923b11-3ee0-4663-a6bc-6185533f06ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_centered.field_section_title
+    - paragraphs.paragraphs_type.title_centered
+  module:
+    - text
+id: paragraph.title_centered.default
+targetEntityType: paragraph
+bundle: title_centered
+mode: default
+content:
+  field_section_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

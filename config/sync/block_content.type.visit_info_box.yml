@@ -1,0 +1,8 @@
+uuid: 27d270f3-63cf-43c7-ba13-79ef4d414bef
+langcode: en
+status: true
+dependencies: {  }
+id: visit_info_box
+label: 'Visit Info Box'
+revision: 0
+description: ''

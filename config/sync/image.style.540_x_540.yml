@@ -1,0 +1,15 @@
+uuid: 708dc52a-e2cd-416a-9297-f4d9777cb100
+langcode: en
+status: true
+dependencies: {  }
+name: 540_x_540
+label: '540 x 540'
+effects:
+  6cb5c1fa-69bb-4e4f-ad5e-1d6529e3b74c:
+    uuid: 6cb5c1fa-69bb-4e4f-ad5e-1d6529e3b74c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 540
+      height: 540
+      anchor: center-center

@@ -1,0 +1,26 @@
+name: THM
+type: theme
+description: Custom theme for The Health Museum
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: classy
+libraries:
+  - thm/owl-carousel
+  - thm/hamburgers
+  - thm/select2
+  - thm/featherlight
+  - thm/styling
+  - thm/scripts
+  - thm/fonts
+libraries-override:
+  classy/base: false
+ckeditor_stylesheets:
+  - css/editor.css
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css # 1
+  - '@classy/css/components/tabs.css' # 2
+regions:
+  header: Header
+  content: Content  # the content region is required
+  content_bottom: Content bottom
+  footer: Footer

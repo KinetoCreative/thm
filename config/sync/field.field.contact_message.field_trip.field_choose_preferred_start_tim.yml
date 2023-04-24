@@ -1,0 +1,21 @@
+uuid: 34184205-a973-44ca-80bf-6ba82dad4dc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_choose_preferred_start_tim
+  module:
+    - options
+id: contact_message.field_trip.field_choose_preferred_start_tim
+field_name: field_choose_preferred_start_tim
+entity_type: contact_message
+bundle: field_trip
+label: 'Choose preferred start time'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,45 @@
+uuid: c6b75b94-2b5d-4cfd-ae50-43101aa200ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contained_content.field_content
+    - paragraphs.paragraphs_type.contained_content
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - field_content
+id: paragraph.contained_content.default
+targetEntityType: paragraph
+bundle: contained_content
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  created: true
+  uid: true

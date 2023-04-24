@@ -1,0 +1,19 @@
+uuid: dd905b4a-3204-488a-989d-4f7b241e6a02
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_school_city
+id: contact_message.2020_21_field_trips.field_school_city
+field_name: field_school_city
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'School City'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

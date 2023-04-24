@@ -1,0 +1,21 @@
+uuid: 4b2cf799-3fe4-4222-ae9b-9cdd69ca0d4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_meta_tags
+    - taxonomy.vocabulary.leadership_type
+  module:
+    - metatag
+id: taxonomy_term.leadership_type.field_meta_tags
+field_name: field_meta_tags
+entity_type: taxonomy_term
+bundle: leadership_type
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

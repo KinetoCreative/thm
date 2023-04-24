@@ -1,0 +1,23 @@
+uuid: 6701a667-28cb-4f8e-8bc9-13d1e63ed199
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contextual_boxes
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.contextual_boxes.body
+field_name: body
+entity_type: block_content
+bundle: contextual_boxes
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

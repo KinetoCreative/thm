@@ -1,0 +1,21 @@
+uuid: 097934af-d415-4c88-a812-e88d4169dab2
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Submit
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+id: education_form
+label: 'Education Form'
+recipients:
+  - lmiles@thehealthmuseum.org
+  - mtrommenschlager@thehealthmuseum.org
+reply: ''
+weight: 0
+message: ''
+redirect: ''

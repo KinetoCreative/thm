@@ -1,0 +1,20 @@
+uuid: 63ce2f55-44d9-4dbc-b5db-947e995dccda
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_how_many_students_a_minimu
+field_name: field_how_many_students_a_minimu
+entity_type: contact_message
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

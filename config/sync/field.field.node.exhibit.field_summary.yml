@@ -1,0 +1,21 @@
+uuid: 8b05d612-f06f-45fc-932d-220c053d4d52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.exhibit
+  module:
+    - text
+id: node.exhibit.field_summary
+field_name: field_summary
+entity_type: node
+bundle: exhibit
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

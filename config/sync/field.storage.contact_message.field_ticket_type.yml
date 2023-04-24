@@ -1,0 +1,30 @@
+uuid: 1987d64e-8627-4c72-82b7-048a047e12bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_ticket_type
+field_name: field_ticket_type
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'General Admission'
+      label: 'General Admission'
+    -
+      value: 'Level 1'
+      label: 'Level 1'
+    -
+      value: 'Level 2'
+      label: 'Level 2'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

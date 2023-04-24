@@ -1,0 +1,19 @@
+uuid: d1f2db15-4c17-4e1b-94e3-57134d2ba487
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_in_person_field_trip
+    - field.storage.contact_message.field_first_and_last_name
+id: contact_message.2020_21_in_person_field_trip.field_first_and_last_name
+field_name: field_first_and_last_name
+entity_type: contact_message
+bundle: 2020_21_in_person_field_trip
+label: 'First and Last Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

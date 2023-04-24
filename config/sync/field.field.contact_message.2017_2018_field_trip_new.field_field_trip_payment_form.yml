@@ -1,0 +1,23 @@
+uuid: 6a06d02d-d688-462c-8e81-8cac6768614f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_field_trip_payment_form
+id: contact_message.2017_2018_field_trip_new.field_field_trip_payment_form
+field_name: field_field_trip_payment_form
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'I have read and agree to: <a href="/public/Payment.pdf"><strong>Field Trip Payment Form</strong></a> (click to read)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

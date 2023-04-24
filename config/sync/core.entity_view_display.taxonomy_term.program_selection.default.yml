@@ -1,0 +1,30 @@
+uuid: 1debede1-5f86-4d74-ae39-74ab94ffe532
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.program_selection.field_meta_tags
+    - taxonomy.vocabulary.program_selection
+  module:
+    - metatag
+    - text
+id: taxonomy_term.program_selection.default
+targetEntityType: taxonomy_term
+bundle: program_selection
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

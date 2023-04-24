@@ -1,0 +1,19 @@
+uuid: b7ab6350-2c67-4f27-8be1-50c325d544d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - markup
+id: contact_message.field_souvenir_bag_text
+field_name: field_souvenir_bag_text
+entity_type: contact_message
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,67 @@
+uuid: 5f704eaf-3e29-4f1e-ab25-9e55731b2095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.useful_docs.field_section_title
+    - paragraphs.paragraphs_type.useful_docs
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_docs_container:
+      children:
+        - field_section_title
+        - field_useful_docs
+      label: 'Docs container'
+      parent_name: ''
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: docs-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - group_docs_container
+        - field_section_title
+        - field_useful_docs
+id: paragraph.useful_docs.default
+targetEntityType: paragraph
+bundle: useful_docs
+mode: default
+content:
+  field_section_title:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+hidden:
+  created: true
+  uid: true

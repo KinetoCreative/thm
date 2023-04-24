@@ -1,0 +1,17 @@
+services:
+  thm_tools.twig.render_menu:
+    class: Drupal\thm_tools\Twig\RenderMenuExtension
+    tags:
+      - { name: twig.extension }
+  thm_tools.twig.quick_slug:
+    class: Drupal\thm_tools\Twig\QuickSlugExtension
+    tags:
+      - { name: twig.extension }
+  thm_tools.twig.render_view:
+    class: Drupal\thm_tools\Twig\RenderViewExtension
+    tags:
+      - { name: twig.extension }
+  thm_tools.twig.extract_filename:
+    class: Drupal\thm_tools\Twig\ExtractFilenameExtension
+    tags:
+      - { name: twig.extension }

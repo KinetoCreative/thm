@@ -1,0 +1,19 @@
+uuid: 420377d7-ba40-4f74-8f74-1ee0ee9cd20d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_special_needs
+id: contact_message.field_trip.field_special_needs
+field_name: field_special_needs
+entity_type: contact_message
+bundle: field_trip
+label: 'Please list any special needs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

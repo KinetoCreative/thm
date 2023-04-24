@@ -1,0 +1,30 @@
+uuid: d8da1452-db09-4baf-bdf8-ac81d750524b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blogs
+  module:
+    - system
+    - views
+  theme:
+    - thm
+id: views_block__blogs_blogs_all
+theme: thm
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:blogs-blogs_all'
+settings:
+  id: 'views_block:blogs-blogs_all'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '*'

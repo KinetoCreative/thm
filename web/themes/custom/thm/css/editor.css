@@ -1,0 +1,182 @@
+/* CUSTOM STYLING USED BY CK EDITOR  */
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.thm-button {
+  cursor: pointer;
+  background-color: #aaa;
+  border-radius: 5px;
+  padding: 1em;
+  display: grid;
+  color: white;
+  line-height: 1 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  font-family: gotham, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.57);
+  max-width: 50%;
+  max-height: auto;
+  border: 0px !important;
+  margin: 0 auto 1rem;
+}
+
+.thm-button:hover {
+  color: #fff;
+  background: #bbb !important;
+  letter-spacing: normal;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+
+
+/* Collapsible Container */
+.wrap-collabsible {
+  margin-bottom: 4rem !important;
+}
+
+input[type="checkbox"] {
+  display: none !important;
+}
+
+.lbl-toggle {
+  display: block !important;
+  font-weight: bold !important;
+  font-size: 1.2rem !important;
+  font-family: gotham, Arial, Helvetica, sans-serif !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  padding: 1rem !important;
+  color: #ffffff;
+  background: #aaa;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.57);
+  cursor: pointer !important;
+  border-radius: 2px;
+  transition: all 0.25s ease-out;
+  margin-top: 0;
+}
+
+.lbl-toggle:hover {
+  font-size: 1.24rem !important;
+}
+
+.lbl-toggle::before {
+  content: " " !important;
+  display: inline-block !important;
+  border-top: 5px solid transparent !important;
+  border-bottom: 5px solid transparent !important;
+  border-left: 5px solid currentColor !important;
+  vertical-align: middle !important;
+  margin-right: 0.7rem !important;
+  transform: translateY(-2px) !important;
+  transition: transform 0.2s ease-out !important;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px) !important;
+}
+
+.collapsible-content {
+  max-height: 0px !important;
+  overflow: hidden !important;
+  transition: max-height 0.25s ease-in-out !important;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100% !important;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-bottom-left-radius: 7px !important;
+  border-bottom-right-radius: 7px !important;
+  padding: 0.5rem 1rem !important;
+}
+
+
+/*Responsive Grid*/
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-auto-rows: auto;
+}
+
+.grid-SM {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  grid-auto-rows: auto;
+}
+
+@media screen and (max-width: 360px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* OTHER STUFF */
+
+.item {
+}
+
+.title {
+  padding: 15px;
+  color: #ffffff;
+  word-wrap: break-word;
+  text-transform: uppercase;
+}
+
+.title h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.title-membership-title {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.blog .title {
+  background-color: #00aeef;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.57);
+}
+
+.desc {
+  padding: 10px 10px 5px 10px;
+}
+
+.desc p {
+  margin: 5px 0 10px 0;
+  text-align: left;
+}
+
+.desc p:last-of-type {
+  margin-bottom: 0;
+}
+
+.desc b {
+  font-size: 1em;
+}

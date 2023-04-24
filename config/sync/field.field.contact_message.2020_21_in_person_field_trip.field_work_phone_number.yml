@@ -1,0 +1,21 @@
+uuid: b0c36740-78e9-4458-ac9c-68f3f160ae5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_in_person_field_trip
+    - field.storage.contact_message.field_work_phone_number
+  module:
+    - telephone
+id: contact_message.2020_21_in_person_field_trip.field_work_phone_number
+field_name: field_work_phone_number
+entity_type: contact_message
+bundle: 2020_21_in_person_field_trip
+label: 'Contact Number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

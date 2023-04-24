@@ -1,0 +1,18 @@
+uuid: 88da73f6-c0ce-4ef1-9717-1a9fb6f990d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_owl_pellet
+field_name: field_owl_pellet
+entity_type: contact_message
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

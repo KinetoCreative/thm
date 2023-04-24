@@ -1,0 +1,23 @@
+uuid: 70701f73-72e7-4e1d-ab00-d147c42f38f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_live_dissection_
+id: contact_message.2020_21_field_trips.field_live_dissection_
+field_name: field_live_dissection_
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'Live Dissection Demos'
+description: "Available for all grade levels; $50/ session; 20 student maximum<br/>\r\n40 minutes"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

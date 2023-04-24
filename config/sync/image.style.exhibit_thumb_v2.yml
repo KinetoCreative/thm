@@ -1,0 +1,15 @@
+uuid: 44a041b6-1138-4b1c-9748-1155256f16f8
+langcode: en
+status: true
+dependencies: {  }
+name: exhibit_thumb_v2
+label: 'Exhibit Thumb v2 (780 x 780)'
+effects:
+  98ab40e0-800c-4a54-8e0d-74f590d29f01:
+    uuid: 98ab40e0-800c-4a54-8e0d-74f590d29f01
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 780
+      height: 780
+      anchor: center-center

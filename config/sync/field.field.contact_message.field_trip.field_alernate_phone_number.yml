@@ -1,0 +1,21 @@
+uuid: 035e7083-fb1b-4688-9cc2-bf21c11ad266
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_alernate_phone_number
+  module:
+    - telephone
+id: contact_message.field_trip.field_alernate_phone_number
+field_name: field_alernate_phone_number
+entity_type: contact_message
+bundle: field_trip
+label: 'Phone number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

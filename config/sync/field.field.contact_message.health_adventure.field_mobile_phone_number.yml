@@ -1,0 +1,19 @@
+uuid: f749d82f-6a32-4349-bd42-e91de9ab4e51
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.health_adventure
+    - field.storage.contact_message.field_mobile_phone_number
+id: contact_message.health_adventure.field_mobile_phone_number
+field_name: field_mobile_phone_number
+entity_type: contact_message
+bundle: health_adventure
+label: 'Mobile Phone'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

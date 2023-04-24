@@ -1,0 +1,23 @@
+uuid: 00a8ad5a-0643-4463-a062-6320b0d27e67
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_nutrition_lab
+id: contact_message.2020_21_field_trips.field_nutrition_lab
+field_name: field_nutrition_lab
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'Nutrition Lab'
+description: "10-30 Students per session<br/>\r\n$5 per student"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

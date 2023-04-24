@@ -1,0 +1,23 @@
+uuid: 25363905-387e-4e42-ab83-c39f353334b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_homepage
+    - node.type.exhibit
+id: node.exhibit.field_featured_homepage
+field_name: field_featured_homepage
+entity_type: node
+bundle: exhibit
+label: 'Featured Homepage'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

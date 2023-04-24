@@ -1,0 +1,20 @@
+uuid: 1f8f80e9-ba52-4cc3-b8ab-e38bd91f0914
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - datetime
+id: contact_message.field_second_choice_date
+field_name: field_second_choice_date
+entity_type: contact_message
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

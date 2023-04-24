@@ -1,0 +1,82 @@
+uuid: 51c34585-5963-4d78-b3ca-b187cd2b448e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.plan_your_visit
+    - field.storage.block_content.field_page_sections
+  module:
+    - entity_reference_revisions
+id: block_content.plan_your_visit.field_page_sections
+field_name: field_page_sections
+entity_type: block_content
+bundle: plan_your_visit
+label: 'Page Sections'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      block_list:
+        weight: 20
+        enabled: false
+      column_blocks_2_1:
+        weight: 21
+        enabled: false
+      contact_form:
+        weight: 22
+        enabled: false
+      contact_form_and_content:
+        weight: 23
+        enabled: false
+      contained_content:
+        weight: 24
+        enabled: false
+      contextual_boxes:
+        weight: 25
+        enabled: false
+      exhibit_brought_by:
+        weight: 26
+        enabled: false
+      flexible_content:
+        weight: 27
+        enabled: false
+      header:
+        weight: 28
+        enabled: false
+      narrow_header:
+        weight: 29
+        enabled: false
+      non_custom_block_list:
+        weight: 30
+        enabled: false
+      page_content:
+        weight: 31
+        enabled: false
+      program_classes:
+        weight: 32
+        enabled: false
+      sidebar_and_blocklist:
+        weight: 33
+        enabled: false
+      sidebar_and_content:
+        weight: 34
+        enabled: false
+      sidebar_block_lists:
+        weight: 35
+        enabled: false
+      slider_header:
+        weight: 36
+        enabled: false
+      three_columns_blocks:
+        weight: 37
+        enabled: false
+      useful_docs:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

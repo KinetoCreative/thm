@@ -1,0 +1,15 @@
+uuid: 172b025e-382f-44e5-a482-aa605a8ce3e8
+langcode: en
+status: true
+dependencies: {  }
+name: 792_x_792_px
+label: '792 x 792 px'
+effects:
+  7be328b8-ee89-42ba-954f-79ca4d08de3d:
+    uuid: 7be328b8-ee89-42ba-954f-79ca4d08de3d
+    id: image_scale
+    weight: 2
+    data:
+      width: 792
+      height: 792
+      upscale: true

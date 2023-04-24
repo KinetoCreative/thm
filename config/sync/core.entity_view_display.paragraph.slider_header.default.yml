@@ -1,0 +1,67 @@
+uuid: d67a5d19-67a9-4d5e-a2e8-06501535ab18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_header.field_content
+    - field.field.paragraph.slider_header.field_slides
+    - field.field.paragraph.slider_header.field_title
+    - paragraphs.paragraphs_type.slider_header
+  module:
+    - field_group
+    - image
+    - text
+third_party_settings:
+  field_group:
+    group_copy_container:
+      children:
+        - field_title
+        - field_content
+      label: 'Copy container'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Copy container'
+        classes: copy-container
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: paragraph.slider_header.default
+targetEntityType: paragraph
+bundle: slider_header
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_slides:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  uid: true

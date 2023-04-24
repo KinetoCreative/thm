@@ -1,0 +1,30 @@
+uuid: 6be7d075-9546-41b7-8f70-8928203e9339
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - thm
+id: views_block__events_event_list_block
+theme: thm
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:events-event_list_block'
+settings:
+  id: 'views_block:events-event_list_block'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '10'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /events

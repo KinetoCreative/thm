@@ -1,0 +1,19 @@
+uuid: 98fc775e-2f34-4495-8dec-87c5efdabc82
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_how_many_chaperones_one_fr
+id: contact_message.field_trip.field_how_many_chaperones_one_fr
+field_name: field_how_many_chaperones_one_fr
+entity_type: contact_message
+bundle: field_trip
+label: 'How many chaperones? (One free chaperone will be admitted for every ten school-age students)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+uuid: 52829594-9243-4060-bad1-715b4dde7962
+langcode: en
+status: true
+dependencies: {  }
+name: banner_1920_x_780_
+label: 'Banner (1920 x 720)'
+effects:
+  8d0d3067-8a12-4b07-8273-a00be64a76a2:
+    uuid: 8d0d3067-8a12-4b07-8273-a00be64a76a2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 720
+      anchor: center-center

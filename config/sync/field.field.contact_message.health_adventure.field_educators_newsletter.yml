@@ -1,0 +1,23 @@
+uuid: b8adb246-8444-45d4-9c44-54645682afe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.health_adventure
+    - field.storage.contact_message.field_educators_newsletter
+id: contact_message.health_adventure.field_educators_newsletter
+field_name: field_educators_newsletter
+entity_type: contact_message
+bundle: health_adventure
+label: 'Would you like to receive our monthly e-newsletter for Educators'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

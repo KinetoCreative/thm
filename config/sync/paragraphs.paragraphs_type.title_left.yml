@@ -1,0 +1,10 @@
+uuid: 9a1c4a1e-8470-43c2-8c60-57b73ef2935e
+langcode: en
+status: true
+dependencies: {  }
+id: title_left
+label: 'Title Left'
+icon_uuid: null
+icon_default: null
+description: 'Title with h2 style, left aligned'
+behavior_plugins: {  }

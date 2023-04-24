@@ -1,0 +1,21 @@
+uuid: ec7d4513-d9e3-4984-8cd9-afdf8645ab5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.health_adventure
+    - field.storage.contact_message.field_2nd_choice_date
+  module:
+    - datetime
+id: contact_message.health_adventure.field_2nd_choice_date
+field_name: field_2nd_choice_date
+entity_type: contact_message
+bundle: health_adventure
+label: '2nd Choice Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

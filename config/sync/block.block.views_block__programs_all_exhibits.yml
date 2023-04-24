@@ -1,0 +1,30 @@
+uuid: 492f69b6-e4f2-47f6-8a11-e0d49e494385
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.programs
+  module:
+    - system
+    - views
+  theme:
+    - thm
+id: views_block__programs_all_exhibits
+theme: thm
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:programs-all_exhibits'
+settings:
+  id: 'views_block:programs-all_exhibits'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '20'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /node/139

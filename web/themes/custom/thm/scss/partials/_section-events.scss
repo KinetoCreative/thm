@@ -1,0 +1,602 @@
+.pickmeup{
+    background:transparent;
+    .pmu-instance{
+        width:100%;
+        padding:0px;
+        height:auto;
+        position:relative;
+        z-index: 800;
+        &:first-child:last-child{
+            nav{
+                padding:0px;
+                border-bottom:1px solid $bc-divider;
+                .pmu-month{
+                    width:100%;
+                    color:$bc-black;
+                    font-family:$ff-roboto;
+                    font-weight:$fw-bold;
+                    font-size:14px;
+                    line-height: 32px;
+                    padding:5px 0px;
+                    height:40px;
+                }
+
+                .pmu-prev{
+                    border-right:1px solid $bc-divider;
+                    width:50px;
+                    height:40px;
+                    line-height: 42px;
+                    color:$text-copy-light;
+                    font-size:10px;
+                }
+                .pmu-next{
+                    border-left:1px solid $bc-divider;
+                    width:50px;
+                    height:40px;
+                    line-height: 42px;
+                    color:$text-copy-light;
+                    font-size:10px;
+                }
+
+                &.pmu-day-of-week{
+                    font-family:$ff-roboto;
+                    font-size:12px;
+                    text-transform: uppercase;
+                    color:$bc-black;
+                    padding:20px 25px 0;
+                    border-bottom:none;
+                    div{
+                        width:28px;
+                        margin:6.5px;
+                    }
+
+                }
+            }
+        }
+
+        .pmu-days{
+            text-align: left;
+            padding:0px 25px 0px 25px;
+            .pmu-button{
+                width:28px;
+                height:28px;
+                margin:6.5px;
+                font-family:$ff-roboto;
+                font-weight:$fw-bold;
+                font-size:14px;
+                line-height: 26px;
+                text-align: center;
+                color:$bc-black;
+                &.pmu-not-in-month{
+                    color:$text-copy-light;
+                }
+                .day-wrapper{
+                    display: block;
+                    width:100%;
+                    height:100%;
+
+                    font-size:14px;
+                    line-height: 28px;
+                    text-align: center;
+                }
+                &.pmu-selected{
+                    background:$bc-dark-green;
+
+                    margin: 6.5px 0px;
+                    width: 41px;
+                    padding: 0px 6.5px;
+
+                    .day-wrapper{
+                        color:$white;
+                        /*@include rounded(15px 15px);*/
+                    }
+                    &.pmu-today{
+                        background:$bc-dark-green;
+                        .day-wrapper{
+                            color:$white;
+                        }
+                    }
+                }
+
+                &.pmu-today{
+                    background:transparent;
+                    background:$bc-divider;
+                    .day-wrapper{
+                        @include rounded(15px 15px);
+                        color:$bc-black;
+
+                    }
+                }
+
+                &.has-events{
+                    .day-wrapper{
+                        @include rounded(15px 15px);
+                        background:$bc-green;
+                        color:$white;
+                    }
+
+                }
+                &.first-selected{
+                    @include rounded(15px 0 0 15px);
+                    background:$bc-dark-green;
+                    margin: 6.5px 0px 6.5px 6.5px;
+                    width: 34.5px;
+                    padding: 0px 6.5px 0px 0px ;
+                    &.pmu-today{
+                        background:$bc-dark-green;
+                    }
+                }
+                &.last-selected{
+                    @include rounded(0 15px 15px 0);
+                    background:$bc-dark-green;
+                    margin: 6.5px 6.5px 6.5px 0px;
+                    width: 34.5px;
+                    padding: 0px  0px 0px 6.5px ;
+                    &.pmu-today{
+                        background:$bc-dark-green;
+                    }
+                }
+                &.first-selected.last-selected{
+                    background:$bc-dark-green;
+                    @include rounded(15px);
+                    margin: 6.5px;
+                    width: 28px;
+                    padding: 0px;
+                    &.pmu-today{
+                        background:$bc-dark-green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.block-views-blockevents-event-list-block{
+    @extend .homepage-section-container-padded;
+    min-height:490px;
+    @extend .clearfix;
+    .custom-view-filters{
+        position:relative;
+        padding-left:420px;
+        margin-bottom:50px;
+        z-index: 800;
+
+        .calendar-container{
+            width:340px;
+            position:absolute;
+            left:0px;
+            top:0px;
+            border:1px solid $bc-divider;
+            .title{
+                text-align: center;
+                padding:20px 30px;
+                font-family:$ff-gotham;
+                font-size:32px;
+                line-height: 32px;
+                font-weight:$fw-medium;
+            }
+            .pick-event-date-container{
+                border-top:1px solid $bc-divider;
+            }
+            .filter-events-btn{
+                width:160px;
+                padding:8px 20px;
+                display: block;
+                margin:20px auto 20px;
+                background:$bc-green;
+                text-align: center;
+                font-size:14px;
+                line-height: 14px;
+                @include rounded(15px);
+                font-family:$ff-roboto;
+                text-transform: uppercase;
+                color:$white;
+                cursor:pointer;
+            }
+        }
+        .events-intervals-tabs{
+            @extend .custom-filter-tabs;
+        }
+        .search{
+            @extend .custom-search-box;
+        }
+        @extend .clearfix;
+        @media #{$break-max-1680}{
+            .events-intervals-tabs{
+                float:none;
+                padding:0px;
+            }
+            .search{
+                float:none;
+                margin:30px auto 0;
+                width:100%;
+                max-width:480px;
+
+            }
+        }
+        @media #{$break-max-1280}{
+            padding-left:380px;
+            .events-intervals-tabs{
+                ul{
+                    li{
+                        font-size:18px;
+                        line-height: 18px;
+                        padding:12px 15px;
+                    }
+                }
+            }
+            .search{
+                float:none;
+                margin:30px 0 0;
+                width:100%;
+                max-width:none;
+            }
+        }
+        @media #{$break-max-1024}{
+            padding: 0;
+            position: static;
+
+            .calendar-container{
+                position: absolute;
+                left: 50%;
+                margin: 30px 0;
+                transform: translateX(-50%);
+                top: calc(100% - 500px);
+
+                .pickmeup .pmu-instance .pmu-days .pmu-button{
+                    /*margin:0px 6.5px;*/
+                    margin: 6.5px 0px;
+                    padding: 0px 6.5px;
+                    width: 41px;
+                }
+            }
+            .events-intervals-tabs{
+                width:100%;
+                margin:0px;
+                ul{
+                    li{
+                        display: block;
+                        width:100%;
+                        padding:17px 25px;
+                        &:first-child{
+                            padding:17px 25px;
+                        }
+                    }
+                }
+            }
+            .search{
+                width:100%;
+                margin:30px auto 0;
+            }
+        }
+        @media #{$break-max-768}{
+            .calendar-container{
+                width:100%;
+                max-width:340px;
+                float:none;
+                margin:0px auto;
+            }
+            .events-intervals-tabs{
+                width:100%;
+                padding:0px;
+                margin:30px auto;
+                ul{
+                    text-align: center;
+                    li{
+                        display: inline-block;
+                        width:auto;
+                        float:none;
+                        padding:17px 15px;
+                        &:first-child{
+                            padding:17px 15px;
+                        }
+
+                    }
+                }
+            }
+            .search{
+                width:100%;
+                max-width:440px;
+                float:none;
+                padding:0px;
+            }
+        }
+        @media #{$break-max-640}{
+            .events-intervals-tabs{
+                ul{
+                    li{
+                        width:100%;
+                        display: block;
+                        clear:both;
+                        max-width:440px;
+                        margin:0px auto;
+                    }
+                }
+            }
+        }
+        @media #{$break-max-480}{
+            .calendar-container{
+                border:none;
+                width:280px;
+                .pickmeup{
+                    width:100%;
+                    .pmu-instance{
+                        &:first-child:last-child{
+                            nav.pmu-day-of-week{
+                                padding:20px 0px;
+                            }
+                        }
+                        .pmu-days{
+                            padding:0px;
+                            .pmu-button{
+                                margin:2px 6px;
+                            }
+                        }
+                    }
+                }
+                .pmu-day-of-week{
+                    padding:20px 0px;
+                }
+
+            }
+
+        }
+    }
+    .view-header{
+        display: block;
+        position:relative;
+        @extend .content-sidebar;
+    }
+    .view-filters{
+        display: none;
+        @extend .content-with-sidebar;
+        .js-form-item-field-date-value-min,
+        .js-form-item-field-date-value-max{
+        }
+        .form--inline{
+            float:right;
+            width:320px;
+        }
+        .js-form-item-search-events{
+            display: inline-block;
+            vertical-align: middle;
+            width:320px;
+            margin-right:-56px;
+            input{
+                @include rounded(30px);
+                border:1px solid $bc-divider;
+                padding:16px 54px 14px 22px;
+                outline:none;
+                font-size:14px;
+                line-height: 14px;
+                width:100%;
+            }
+        }
+        .form-actions{
+            display: inline-block;
+            ;
+            vertical-align: middle;
+            .form-submit{
+                display: block;
+                width:40px;
+                height:40px;
+                background:url(../images/search.svg) no-repeat center center;
+                border:none;
+                text-indent:-999px;
+                overflow:hidden;
+                padding: 0px;
+            }
+        }
+    }
+    .view-content{
+        @extend .content-with-sidebar;
+        padding-left:380px;
+        .views-row{
+            width:50%;
+            padding-left:40px;
+            float:left;
+            margin-top:30px;
+            &:nth-child(2n+1){
+                clear:left;
+            }
+            .node--type-event{
+                border:1px solid $bc-divider;
+                padding:30px;
+                position:relative;
+                .date-tag{
+                    @extend .item-top-date-tag;
+                    &.featured-1{
+                      background-color: $bc-red;
+                    }
+                }
+                .field--name-field-featured-image{
+                    width:100%;
+                    a{
+                        display: block;
+                    }
+                    img{
+                        display: block;
+                        width:100%;
+                        height:auto;
+                    }
+                }
+                .field--name-node-title{
+                    margin:40px 0 10px;
+                    @extend .list-item-title;
+                    a{
+                        color:$text-black2;
+                        text-decoration: none;
+                    }
+                }
+                .field--name-field-date,
+                .field--name-field-event-location{
+                    font-family: $ff-roboto;
+                    font-weight:$fw-medium;
+                    font-size: 14px;
+                    color: $text-copy-light;
+                    line-height: 24px;
+                }
+                .field--name-field-summary{
+                    margin:10px 0 0;
+                    font-size:14px;
+                    line-height: 30px;
+                    font-weight: $fw-light;
+                    font-family: $ff-roboto;
+                    color: $text-copy-light;
+                }
+                .field--name-node-link{
+                    @extend .more-link-btn;
+                }
+            }
+        }
+        @media #{$break-max-1280}{
+            padding-left:340px;
+        }
+        @media #{$break-max-1024}{
+            padding:0px;
+            margin:0px auto;
+            .views-row{
+
+            }
+        }
+    }
+
+    @media #{$break-max-1024}{
+      position: relative;
+      padding-bottom: 500px;
+    }
+}
+
+.events-all{
+    @media #{$break-max-1024}{
+        margin-left:-30px;
+        .view-content{
+            display: flex;
+            flex-wrap: wrap;
+            .views-row{
+                display: flex;
+                padding-left:30px;
+            }
+        }
+    }
+    @media #{$break-max-640}{
+        margin:0px;
+        .view-content{
+            display: block;
+            margin:0px;
+            .views-row{
+                display: block;
+                width:100%;
+                max-width:540px;
+                margin:30px auto;
+                float:none;
+                padding:0px;
+            }
+        }
+    }
+}
+
+#block-mainpagecontent{
+    .node--type-event{
+        width:100%;
+        max-width:860px;
+        margin:60px auto;
+        padding:0px 60px;
+
+        font-size: 16px;
+        line-height: 32px;
+        font-family: $ff-roboto;
+        font-weight: 300;
+
+        .field--name-body{
+            ul{
+                list-style-type: circle;
+            }
+        }
+        @media #{$break-max-768}{
+            padding:0px 30px;
+        }
+        @media #{$break-max-360}{
+            padding:0px 15px;
+        }
+    }
+    .event-header{
+        @extend .homepage-section-container-padded;
+        padding:0px;
+        text-align: center;
+    }
+    .field--name-node-title{
+        @extend .centered-h1;
+        width:100%;
+        background:transparent;
+        h1{
+            width:100%;
+
+            /*&:before{
+                left:60px;
+                right:60px;
+                width:auto;
+            }*/
+        }
+        @media #{$break-max-768}{
+            font-size:32px;
+            line-height: 32px;
+            padding:10px 0px;
+        }
+        @media #{$break-max-360}{
+            font-size:27px;
+            line-height: 27px;
+            padding:10px 0px;
+        }
+    }
+    .field--name-field-date{
+        display: inline-block;
+        vertical-align: middle;
+        font-weight:$fw-bold;
+        &:before{
+            content:'on';
+            display: inline-block;
+            font-weight: $fw-regular;
+            font-style:italic;
+        }
+        .field__item{
+            display: inline-block;
+        }
+    }
+    .field--name-field-featured-image{
+        margin:32px auto;
+        img{
+            width:100%;
+            max-width: 640px;
+            height: auto;
+            margin:auto;
+            display: block;
+        }
+    }
+    .content-wrapper{
+        .embedded-entity{
+            width:100%;
+            margin:32px auto;
+            max-width: 640px;
+            img{
+                width:100%;
+                height:auto;
+                margin:0px auto;
+                display: block;
+            }
+        }
+        p{
+            margin-top:16px;
+            &:first-child{
+                margin-top:0px;
+            }
+        }
+    }
+
+}
+
+.field--name-field-featured{
+  display: none;
+}

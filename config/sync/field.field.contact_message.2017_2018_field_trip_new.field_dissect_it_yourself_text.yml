@@ -1,0 +1,25 @@
+uuid: 90b9d22c-7fbe-4c93-b0c6-7b8b554fbd55
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_dissect_it_yourself_text
+  module:
+    - markup
+id: contact_message.2017_2018_field_trip_new.field_dissect_it_yourself_text
+field_name: field_dissect_it_yourself_text
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'Dissect it yourself text'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<div class=\"description\">3rd-12th grade</div>\r\n"
+    format: ckeditor
+field_type: markup

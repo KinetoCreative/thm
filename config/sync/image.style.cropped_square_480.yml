@@ -1,0 +1,15 @@
+uuid: f2c2f17a-a863-4621-a80b-0c621064939a
+langcode: en
+status: true
+dependencies: {  }
+name: cropped_square_480
+label: 'Cropped square 480'
+effects:
+  07e2ab5d-95da-4844-b400-4817856037d2:
+    uuid: 07e2ab5d-95da-4844-b400-4817856037d2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 480
+      anchor: center-center

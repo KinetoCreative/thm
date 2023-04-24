@@ -1,0 +1,19 @@
+uuid: d8938025-5731-4c9f-9740-1726cc0a2d64
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_school_district
+id: contact_message.field_trip.field_school_district
+field_name: field_school_district
+entity_type: contact_message
+bundle: field_trip
+label: 'School District'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

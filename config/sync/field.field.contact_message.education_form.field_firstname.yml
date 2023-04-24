@@ -1,0 +1,19 @@
+uuid: 079e2492-7dec-498a-9768-597a22c120e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.education_form
+    - field.storage.contact_message.field_firstname
+id: contact_message.education_form.field_firstname
+field_name: field_firstname
+entity_type: contact_message
+bundle: education_form
+label: 'First Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

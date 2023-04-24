@@ -1,0 +1,19 @@
+uuid: 29f5e394-17e1-4df3-8c83-e678771ffc9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.group_reservation_form
+    - field.storage.contact_message.field_group_senior_dcl
+id: contact_message.group_reservation_form.field_group_senior_dcl
+field_name: field_group_senior_dcl
+entity_type: contact_message
+bundle: group_reservation_form
+label: 'Group Senior DCL $10'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

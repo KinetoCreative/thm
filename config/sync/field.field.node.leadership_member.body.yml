@@ -1,0 +1,23 @@
+uuid: 43846796-4b1b-4c2d-876b-5e71f2d1521b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.leadership_member
+  module:
+    - text
+id: node.leadership_member.body
+field_name: body
+entity_type: node
+bundle: leadership_member
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,154 @@
+uuid: 114c3541-a076-4508-898b-f0663af95443
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.party_package.body
+    - field.field.node.party_package.field_book_now_link
+    - field.field.node.party_package.field_capacity
+    - field.field.node.party_package.field_image
+    - field.field.node.party_package.field_meta_tags
+    - field.field.node.party_package.field_price_member
+    - field.field.node.party_package.field_price_non_member
+    - field.field.node.party_package.field_yoast_seo
+    - node.type.party_package
+  module:
+    - ds
+    - field_group
+    - image
+    - link
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - field_image
+        - group_de
+        - node_title
+        - field_capacity
+        - group_package_prices
+        - field_price_non_member
+        - field_book_now_link
+        - field_price_member
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          wrapper: h3
+          class: ''
+  field_group:
+    group_package_prices:
+      children:
+        - field_price_non_member
+        - field_price_member
+      label: 'Package prices'
+      parent_name: group_de
+      region: ds_content
+      weight: 4
+      format_type: html_element
+      format_settings:
+        classes: package-prices
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_de:
+      children:
+        - node_title
+        - field_capacity
+        - group_package_prices
+        - field_book_now_link
+      label: 'Details wrapper'
+      parent_name: ''
+      region: ds_content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: details-wrapper
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.party_package.teaser
+targetEntityType: node
+bundle: party_package
+mode: teaser
+content:
+  field_book_now_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: ds_content
+  field_capacity:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  field_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  field_price_member:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: ds_content
+  field_price_non_member:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: ds_content
+hidden:
+  body: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  links: true

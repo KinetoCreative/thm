@@ -1,0 +1,53 @@
+uuid: 01b51ffc-391f-4943-ae7e-0f6cd2ec6fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.leadership_type.field_listing_title
+    - field.field.taxonomy_term.leadership_type.field_meta_tags
+    - taxonomy.vocabulary.leadership_type
+  module:
+    - ds
+    - metatag
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - field_listing_title
+id: taxonomy_term.leadership_type.default
+targetEntityType: taxonomy_term
+bundle: leadership_type
+mode: default
+content:
+  field_listing_title:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  description: true

@@ -1,0 +1,23 @@
+uuid: f0b9595c-e56f-4ebd-82dd-6527c9b3b710
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.education_form
+    - field.storage.contact_message.field_agree_photo_media
+id: contact_message.education_form.field_agree_photo_media
+field_name: field_agree_photo_media
+entity_type: contact_message
+bundle: education_form
+label: 'You agree to the Health Museum''s terms for photo and media release'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

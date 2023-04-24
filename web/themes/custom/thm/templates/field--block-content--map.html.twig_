@@ -1,0 +1,87 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes }} >
+  {# title_prefix #}
+  {% if label %}
+    <!--h2{{ title_attributes }}>{{ label }}</h2-->
+  {% endif %}
+  {# kint(content) #}
+  {# title_suffix #}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  <div class="map-container">
+    <div id="holder-map" data-latitude="{{content['#entity'].field_latitude.value}}" data-longitude="{{content['#entity'].field_longitude.value}}">
+    </div>
+  </div>
+
+</div>
+
+<script>
+      var map;
+      var mapElement = document.getElementById('holder-map');
+      console.log(mapElement.dataset.latitude);
+      var latitude = parseFloat(mapElement.dataset.latitude);
+      var longitude = parseFloat(mapElement.dataset.longitude);
+      function initMap() {
+
+        map = new google.maps.Map(mapElement, {
+          center: {lat: latitude, lng: longitude},
+          zoom: 14,
+          disableDefaultUI: true,
+          scrollwheel: false
+        });
+        var image = {
+          url: 'themes/custom/marqe/images/marker-large.png',
+          scaledSize: new google.maps.Size(64,90)
+        }
+        var beachMarker = new google.maps.Marker({
+            position: {lat: latitude, lng: longitude},
+            map: map,
+            icon: image
+        });
+        google.maps.event.addDomListener(window, "resize", function() {
+            var center = map.getCenter();
+            google.maps.event.trigger(map, "resize");
+            map.setCenter(center); 
+        });
+
+        map.panBy(0,-80);
+
+
+
+      }
+
+      
+      
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3sa3bsqJz0QbaRxQaeqqcCPE14wtixGE&callback=initMap"
+    async defer></script>

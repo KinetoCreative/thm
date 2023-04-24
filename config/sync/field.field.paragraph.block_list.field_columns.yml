@@ -1,0 +1,21 @@
+uuid: 62a93e35-d81d-4289-897c-2ea8df87f786
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns
+    - paragraphs.paragraphs_type.block_list
+  module:
+    - options
+id: paragraph.block_list.field_columns
+field_name: field_columns
+entity_type: paragraph
+bundle: block_list
+label: Columns
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

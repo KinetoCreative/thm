@@ -1,0 +1,21 @@
+uuid: 8d57e19c-00bd-4554-a3c4-df78290a4a5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.blog_entry
+  module:
+    - metatag
+id: node.blog_entry.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: blog_entry
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -1,0 +1,23 @@
+uuid: 02092e54-11c4-402d-8d20-103490196f1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_clinical_case_lab
+id: contact_message.2020_21_field_trips.field_clinical_case_lab
+field_name: field_clinical_case_lab
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'Clinical Case Lab-Diabetes'
+description: "10-30 Students per session<br/>\r\n$8 per student"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

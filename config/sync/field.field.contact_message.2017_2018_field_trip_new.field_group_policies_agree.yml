@@ -1,0 +1,23 @@
+uuid: 7c80b5a9-fab4-4404-9026-c14e7ce8a15e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_group_policies_agree
+id: contact_message.2017_2018_field_trip_new.field_group_policies_agree
+field_name: field_group_policies_agree
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'I have read and agree to: <a href="/public/Policies.pdf"><strong>Group Policies and Procedures</strong></a> (click to read)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

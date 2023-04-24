@@ -1,0 +1,15 @@
+uuid: 5b445f7c-bfec-45de-bb74-c481766fd4e9
+langcode: en
+status: true
+dependencies: {  }
+name: logo
+label: 'Logo 345x181'
+effects:
+  ba358663-227b-43e4-8f19-df1f21f41ee1:
+    uuid: ba358663-227b-43e4-8f19-df1f21f41ee1
+    id: image_scale
+    weight: 1
+    data:
+      width: 345
+      height: 181
+      upscale: false

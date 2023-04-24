@@ -1,0 +1,25 @@
+uuid: 800601ac-7949-4923-9c35-1bd406cb3350
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_confirmation_text
+  module:
+    - markup
+id: contact_message.2020_21_field_trips.field_confirmation_text
+field_name: field_confirmation_text
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'Confirmation text'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><strong>By clicking the submit button, you and other attending adults agree to the following:</strong></p>\r\n"
+    format: ckeditor
+field_type: markup

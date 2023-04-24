@@ -1,0 +1,19 @@
+uuid: f30c2396-0574-4934-bb84-5cf696a89dab
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - markup
+id: contact_message.field_add_ons_markup
+field_name: field_add_ons_markup
+entity_type: contact_message
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

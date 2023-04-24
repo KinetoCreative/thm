@@ -1,0 +1,8 @@
+uuid: 339d42ef-97af-43c1-8fd1-33cb64ebe195
+langcode: en
+status: true
+dependencies: {  }
+id: custom_menu_subtree
+label: 'Custom Menu Subtree'
+revision: 0
+description: ''

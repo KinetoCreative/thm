@@ -1,0 +1,20 @@
+uuid: 292d0e51-a78c-4bbc-9516-fa70f8157a6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_menu_level
+field_name: field_menu_level
+entity_type: block_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: d27e7e65-9d62-473a-9789-8bdccbabd3cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_add_ons_disclaimer
+  module:
+    - markup
+id: contact_message.2020_21_field_trips.field_add_ons_disclaimer
+field_name: field_add_ons_disclaimer
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'Add-Ons Disclaimer'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Add-on experiences only available September - May. Advance registration required.</p>\r\n"
+    format: ckeditor
+field_type: markup

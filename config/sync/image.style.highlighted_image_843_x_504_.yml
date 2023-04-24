@@ -1,0 +1,15 @@
+uuid: bb440388-74f9-4ed2-9523-3e358652b2b0
+langcode: en
+status: true
+dependencies: {  }
+name: highlighted_image_843_x_504_
+label: 'Highlighted Image (843 x 504)'
+effects:
+  1d888435-a2e7-45de-89da-8b1d0ee825d5:
+    uuid: 1d888435-a2e7-45de-89da-8b1d0ee825d5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 843
+      height: 504
+      anchor: center-center

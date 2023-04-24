@@ -1,0 +1,21 @@
+uuid: d957bc4b-37a8-49ec-9d24-8c3a42aee124
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.membership_level
+  module:
+    - yoast_seo
+id: node.membership_level.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: membership_level
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

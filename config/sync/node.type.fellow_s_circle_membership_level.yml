@@ -1,0 +1,18 @@
+uuid: b534c443-e211-41f9-9da8-865a7a3b39fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:'
+name: 'Fellow''s Circle Membership Level'
+type: fellow_s_circle_membership_level
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

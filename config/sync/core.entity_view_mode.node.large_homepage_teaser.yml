@@ -1,0 +1,10 @@
+uuid: ff1cd640-7bc2-4f1a-ad2f-54bd61317783
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.large_homepage_teaser
+label: 'Large Homepage Teaser'
+targetEntityType: node
+cache: true

@@ -1,0 +1,21 @@
+uuid: 01024110-647e-4e41-8a5f-ce7625ed7690
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_school_phone
+  module:
+    - telephone
+id: contact_message.2020_21_field_trips.field_school_phone
+field_name: field_school_phone
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: 'School Phone'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

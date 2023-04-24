@@ -1,0 +1,21 @@
+uuid: 7a01afbe-b870-4b3a-9710-e92fa702fa3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.field_trip
+    - field.storage.contact_message.field_grade_level_of_students
+  module:
+    - options
+id: contact_message.field_trip.field_grade_level_of_students
+field_name: field_grade_level_of_students
+entity_type: contact_message
+bundle: field_trip
+label: 'Grade Level'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 7ef384a0-d72f-48ad-992c-57a09e5f18a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.reservation_tickets
+    - field.storage.contact_message.field_ticket_type
+  module:
+    - options
+id: contact_message.reservation_tickets.field_ticket_type
+field_name: field_ticket_type
+entity_type: contact_message
+bundle: reservation_tickets
+label: 'Ticket Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

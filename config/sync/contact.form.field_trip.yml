@@ -1,0 +1,20 @@
+uuid: a64a083a-7bf3-4d7f-aab9-ce9fc63475fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Submit
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+id: field_trip
+label: 'Field Trip'
+recipients:
+  - reservations@thehealthmuseum.org
+reply: ''
+weight: 0
+message: ''
+redirect: ''

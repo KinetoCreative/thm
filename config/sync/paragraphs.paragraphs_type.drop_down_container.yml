@@ -1,0 +1,10 @@
+uuid: 9c1a2479-e667-445d-8246-2d23b64f7844
+langcode: en
+status: true
+dependencies: {  }
+id: drop_down_container
+label: 'Drop down container'
+icon_uuid: null
+icon_default: null
+description: 'Header bar and container for a content drop-down'
+behavior_plugins: {  }

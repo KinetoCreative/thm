@@ -1,0 +1,21 @@
+uuid: d22f8048-3ce8-4d56-8ae9-b104ea2407c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_listing_title
+    - taxonomy.vocabulary.leadership_type
+  module:
+    - text
+id: taxonomy_term.leadership_type.field_listing_title
+field_name: field_listing_title
+entity_type: taxonomy_term
+bundle: leadership_type
+label: 'Listing title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

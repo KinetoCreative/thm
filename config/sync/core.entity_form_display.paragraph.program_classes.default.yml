@@ -1,0 +1,34 @@
+uuid: 6eb0e3ee-2ee1-45e3-85d5-af89b33a09d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_classes.field_program_classes
+    - paragraphs.paragraphs_type.program_classes
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+id: paragraph.program_classes.default
+targetEntityType: paragraph
+bundle: program_classes
+mode: default
+content:
+  field_program_classes:
+    type: inline_entity_form_complex
+    weight: 0
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+hidden:
+  created: true
+  status: true
+  uid: true

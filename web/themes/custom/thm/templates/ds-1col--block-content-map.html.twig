@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+<{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
+
+  <div class="map-container">
+    <div id="holder-map" data-latitude="{{content['#entity'].field_latitude.value}}" data-longitude="{{content['#entity'].field_longitude.value}}">
+    </div>
+  </div>
+
+</{{ ds_content_wrapper }}>
+
+<script>
+      var map;
+      var mapElement = document.getElementById('holder-map');
+      console.log(mapElement.dataset.latitude);
+      var latitude = parseFloat(mapElement.dataset.latitude);
+      var longitude = parseFloat(mapElement.dataset.longitude);
+      function initMap() {
+
+        map = new google.maps.Map(mapElement, {
+          center: {lat: latitude, lng: longitude},
+          zoom: 16,
+          disableDefaultUI: true,
+          scrollwheel: false
+        });
+        var image = {
+          url: 'themes/custom/thm/images/marker_large.png',
+          scaledSize: new google.maps.Size(60,60)
+        }
+        var beachMarker = new google.maps.Marker({
+            position: {lat: latitude, lng: longitude},
+            map: map,
+            icon: image
+        });
+        google.maps.event.addDomListener(window, "resize", function() {
+            var center = map.getCenter();
+            google.maps.event.trigger(map, "resize");
+            map.setCenter(center); 
+        });
+
+        map.panBy(0,-80);
+
+
+
+      }
+
+      
+      
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqSyI9yX3w2htr7H48XOTJKuqtox19TU8&callback=initMap"
+    async defer></script>

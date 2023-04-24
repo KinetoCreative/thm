@@ -1,0 +1,6 @@
+uuid: b915a64a-627a-4454-8ca9-14ed34383763
+langcode: en
+status: true
+dependencies: {  }
+id: block_list
+label: 'Block list'

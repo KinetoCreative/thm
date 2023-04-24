@@ -1,0 +1,25 @@
+uuid: eb4c38b9-6cac-4a4b-8420-169c6e16c46a
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_new
+    - field.storage.contact_message.field_add_ons_markup
+  module:
+    - markup
+id: contact_message.2017_2018_field_trip_new.field_add_ons_markup
+field_name: field_add_ons_markup
+entity_type: contact_message
+bundle: 2017_2018_field_trip_new
+label: 'Add Ons Markup'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Add a Hands-On Discovery Labs activity that will make your experience memorable and unique</p>\r\n"
+    format: ckeditor
+field_type: markup

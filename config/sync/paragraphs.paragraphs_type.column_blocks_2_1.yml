@@ -1,0 +1,6 @@
+uuid: 7c33f92a-142a-4dc8-8744-e4e4d688aa30
+langcode: en
+status: true
+dependencies: {  }
+id: column_blocks_2_1
+label: 'Column blocks 2+1'

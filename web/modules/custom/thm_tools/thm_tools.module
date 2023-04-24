@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Contains thm_tools.module..
+ */
+ 
+function thm_tools_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['search_events'])) {
+    $form['search_events']['#placeholder'] = t('test');
+  }
+}
+
+ function thm_tools_theme() {
+  $theme = [];
+  
+  $theme['header_menus'] = [
+    'variables' => ['form' => NULL,'bundles' => NULL,'account_menu' => NULL, 'variables'=> NULL, 'dogs'=>NULL, 'logged_in'=>NULL, 'categories'=> NULL],
+    'template' => 'header_menus_block',
+  ];
+
+  return $theme;
+}
+
+
+function thm_tools_mail_alter(&$message) {
+
+  if ($message['subject'] == '[Field Trip] ' || $message['subject'] == '[Group Reservation Form] '){
+
+      $to = $message['params']['contact_message']->get('field_email')->getString();
+
+      $mailManager = \Drupal::service('plugin.manager.mail');
+
+      $module = 'thm_tools';
+      $key = 'node_insert';
+      $params['subject'] = $message['subject'];
+      $params['message'] = $message['body'][1];
+      $langcode = \Drupal::currentUser()->getPreferredLangcode();
+      $send = true;
+
+      $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+  }
+
+}
+
+function thm_tools_mail($key, &$message, $params) {
+
+  $sub = $params['subject'];
+  $msg = 'Your Reservation Request Has Been Submitted.  Our team is processing your request, and will notify you when your reservation is confirmed. <br/><br/>' . $params['message'];
+  
+  switch ($key) {
+    case 'node_insert':
+      $message['subject'] = Drupal\Core\Mail\MailFormatHelper::htmlToText($sub);
+      $message['body'][] = Drupal\Core\Mail\MailFormatHelper::htmlToText($msg);
+
+      break;
+  }
+}
+
+/*
+function thm_tools_cron(){
+
+    // get all field collection items
+    $query = \Drupal::entityQuery('field_collection_item');
+    $results = $query->execute();
+
+    // load each one and check that they are linked to an entity
+    foreach($results as $result){
+      $entity = \Drupal::entityTypeManager()->getStorage('field_collection_item')->load($result);   
+      if( empty( $entity->getHostId() ) ){
+        $entity->delete();
+      }
+    }
+  }
+*/

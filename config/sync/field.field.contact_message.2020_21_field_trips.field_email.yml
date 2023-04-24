@@ -1,0 +1,19 @@
+uuid: cea993d3-5e09-4250-920d-d3536cc0fc88
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2020_21_field_trips
+    - field.storage.contact_message.field_email
+id: contact_message.2020_21_field_trips.field_email
+field_name: field_email
+entity_type: contact_message
+bundle: 2020_21_field_trips
+label: Email
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

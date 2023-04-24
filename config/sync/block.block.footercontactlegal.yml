@@ -1,0 +1,31 @@
+uuid: a9c4a7a4-5413-4f37-b370-e4eee4e6d058
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:short_textarea:85433943-89ba-40fd-836c-16d42d55c1df'
+  module:
+    - block_content
+    - system
+  theme:
+    - thm
+id: footercontactlegal
+theme: thm
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:85433943-89ba-40fd-836c-16d42d55c1df'
+settings:
+  id: 'block_content:85433943-89ba-40fd-836c-16d42d55c1df'
+  label: 'Footer Contact / Legal'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '*'

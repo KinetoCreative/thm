@@ -1,0 +1,21 @@
+uuid: 47786d6f-acbd-48e5-875b-b197ed7b0337
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.educational_program
+  module:
+    - datetime
+id: node.educational_program.field_date
+field_name: field_date
+entity_type: node
+bundle: educational_program
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

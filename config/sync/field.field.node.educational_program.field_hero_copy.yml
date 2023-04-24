@@ -1,0 +1,21 @@
+uuid: a72f7e63-04e9-4283-8c35-4a3bb516e099
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_copy
+    - node.type.educational_program
+  module:
+    - text
+id: node.educational_program.field_hero_copy
+field_name: field_hero_copy
+entity_type: node
+bundle: educational_program
+label: 'Hero Copy'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

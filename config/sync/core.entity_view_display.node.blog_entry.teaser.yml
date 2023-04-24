@@ -1,0 +1,146 @@
+uuid: 866e7ba4-dbf2-4834-9329-37d4a7262497
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog_entry.body
+    - field.field.node.blog_entry.field_author
+    - field.field.node.blog_entry.field_date
+    - field.field.node.blog_entry.field_featured_image
+    - field.field.node.blog_entry.field_meta_tags
+    - field.field.node.blog_entry.field_summary
+    - field.field.node.blog_entry.field_yoast_seo
+    - node.type.blog_entry
+  module:
+    - datetime
+    - ds
+    - field_group
+    - image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_details_wrapper:
+      children:
+        - group_item_blog_wrapper
+        - node_title
+        - field_date
+        - field_featured_image
+        - field_summary
+        - node_link
+      label: 'Details Wrapper'
+      parent_name: group_item_blog_wrapper
+      region: ds_content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Details Wrapper'
+        classes: grid-blogs
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_item_blog_wrapper:
+      children:
+        - group_details_wrapper
+      label: 'Item Blog Wrapper'
+      parent_name: group_details_wrapper
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: 'item blog'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - group_item_blog_wrapper
+        - group_details_wrapper
+        - node_title
+        - field_date
+        - field_featured_image
+        - field_summary
+        - node_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 11
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: title-blogs
+      node_link:
+        plugin_id: node_link
+        weight: 15
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': ''
+          wrapper: b
+          class: button-blog
+id: node.blog_entry.teaser
+targetEntityType: node
+bundle: blog_entry
+mode: teaser
+content:
+  field_date:
+    type: datetime_custom
+    label: visually_hidden
+    settings:
+      timezone_override: ''
+      date_format: 'd M Y'
+    third_party_settings: {  }
+    weight: 12
+    region: ds_content
+  field_featured_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 13
+    region: ds_content
+  field_summary:
+    type: text_trimmed
+    label: visually_hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 14
+    region: ds_content
+hidden:
+  body: true
+  field_author: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  links: true

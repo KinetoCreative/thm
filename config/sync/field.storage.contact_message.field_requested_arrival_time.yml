@@ -1,0 +1,69 @@
+uuid: 3d3c56ed-78cc-40f2-934f-ce964e57be52
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_requested_arrival_time
+field_name: field_requested_arrival_time
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '9 AM'
+      label: '9 AM'
+    -
+      value: '9:30 AM'
+      label: '9:30 AM'
+    -
+      value: '10 AM'
+      label: '10 AM'
+    -
+      value: '10:30 AM'
+      label: '10:30 AM'
+    -
+      value: '11 AM'
+      label: '11 AM'
+    -
+      value: '11:30 AM'
+      label: '11:30 AM'
+    -
+      value: '12 PM'
+      label: '12 PM'
+    -
+      value: '12:30 PM'
+      label: '12:30 PM'
+    -
+      value: '1 PM'
+      label: '1 PM'
+    -
+      value: '1:30 PM'
+      label: '1:30 PM'
+    -
+      value: '2 PM'
+      label: '2 PM'
+    -
+      value: '2:30 PM'
+      label: '2:30 PM'
+    -
+      value: '3 PM'
+      label: '3 PM'
+    -
+      value: '3:30 PM'
+      label: '3:30 PM'
+    -
+      value: '4 PM'
+      label: '4 PM'
+    -
+      value: '4:30 PM'
+      label: '4:30 PM'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

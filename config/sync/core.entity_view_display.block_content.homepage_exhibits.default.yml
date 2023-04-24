@@ -1,0 +1,101 @@
+uuid: 3a5260c4-f5ab-40a6-b1e1-65d87808eb60
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_exhibits
+    - field.field.block_content.homepage_exhibits.body
+    - field.field.block_content.homepage_exhibits.field_large_exhibits
+    - field.field.block_content.homepage_exhibits.field_other_exhibits
+    - field.field.block_content.homepage_exhibits.field_title
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - group_block_header
+        - field_title
+        - body
+        - field_large_exhibits
+        - field_other_exhibits
+  field_group:
+    group_block_header:
+      children:
+        - field_title
+        - body
+      label: 'Block Header'
+      parent_name: ''
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Block Header'
+        classes: block-header
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: block_content.homepage_exhibits.default
+targetEntityType: block_content
+bundle: homepage_exhibits
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_large_exhibits:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: large_homepage_teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    weight: 3
+    region: ds_content
+  field_other_exhibits:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: homepage_teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    weight: 4
+    region: ds_content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+hidden: {  }

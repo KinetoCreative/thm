@@ -1,0 +1,23 @@
+uuid: aea2e5b6-050f-462e-a5ee-34765466261d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.party_package
+  module:
+    - text
+id: node.party_package.body
+field_name: body
+entity_type: node
+bundle: party_package
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: 765bb573-8a7e-4df7-9322-5e6e5690bc9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_reservation
+    - field.storage.contact_message.field_email
+id: contact_message.2017_2018_field_trip_reservation.field_email
+field_name: field_email
+entity_type: contact_message
+bundle: 2017_2018_field_trip_reservation
+label: Email
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

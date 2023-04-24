@@ -1,0 +1,21 @@
+uuid: 93e7018e-135f-4f75-b9dc-260f656b9bdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort_order
+    - node.type.fellow_s_circle_membership_level
+  module:
+    - options
+id: node.fellow_s_circle_membership_level.field_sort_order
+field_name: field_sort_order
+entity_type: node
+bundle: fellow_s_circle_membership_level
+label: 'Sort Order'
+description: 'The order in which this level will appear.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

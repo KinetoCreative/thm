@@ -1,0 +1,76 @@
+styling:
+  version: 1.x
+  css:
+    theme:
+      css/jquery.webui-popover.css: {}
+      css/jquery.comiseo.daterangepicker.css: {}
+      //vjs.zencdn.net/5.8/video-js.min.css: {type: external}
+      css/pickmeup.css: {}
+      css/main.css: {}
+      css/custom.css: {}
+hamburgers:
+  version: 0.5.x
+  css:
+    theme:
+      css/hamburgers.css: {}
+scripts:
+  version: 1.x
+  js:
+    js/jquery.imagemapster.min.js: {}
+    js/jquery.webui-popover.js: {}
+    js/slideout.min.js: {}
+    js/moment.min.js: {}
+    js/js.cookie.js: {}
+    js/background-check.min.js: {}
+    js/masonry.pkgd.min.js: {}
+    //vjs.zencdn.net/5.8/video.min.js: {type: external}
+    js/jquery-dateFormat.min.js: {}
+    js/jquery.comiseo.daterangepicker.js: {}
+    js/pickmeup.min.js: {}
+    js/script.js: {}
+    js/custom.js: {}
+
+  dependencies:
+    - core/jquery
+    - jquery_ui/widget
+    - jquery_ui_button/button
+    - jquery_ui_menu/menu
+    - jquery_ui_datepicker/datepicker
+    - jquery_ui_accordion/accordion
+    - thm/owl-carousel
+owl-carousel:
+  version: 1.3.3
+  css:
+    theme:
+      css/owl.carousel.min.css: {}
+      css/owl.theme.default.min.css: {}
+      css/owl.transitions.css: {}
+  js:
+    js/owl.carousel.min.js: {}
+  dependencies:
+    - core/jquery
+featherlight:
+  version: 1.3.3
+  css:
+    theme:
+      css/featherlight.min.css: {}
+      css/featherlight.gallery.min.css: {}
+  js:
+    js/featherlight.min.js: {}
+    js/featherlight.gallery.min.js: {}
+  dependencies:
+    - core/jquery
+select2:
+  version: 4.0.3
+  css:
+    theme:
+      css/select2.min.css: {}
+  js:
+    js/select2.full.min.js: {}
+  dependencies:
+    - core/jquery
+fonts:
+  css:
+    theme:
+      //fonts.googleapis.com/css?family=Lato:400,700: {type: external}
+      //fonts.googleapis.com/css?family=Open+Sans:400,600,700: {type: external}

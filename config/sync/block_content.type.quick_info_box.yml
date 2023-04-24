@@ -1,0 +1,8 @@
+uuid: c1efd926-f3d6-415b-8358-7c87a0dc28d0
+langcode: en
+status: true
+dependencies: {  }
+id: quick_info_box
+label: 'Quick info box'
+revision: 0
+description: ''

@@ -1,0 +1,125 @@
+uuid: 4252eaad-3dd4-4099-aa5e-4793405f5e7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.homepage_teaser
+    - field.field.node.exhibit.body
+    - field.field.node.exhibit.field_featured_homepage
+    - field.field.node.exhibit.field_featured_homepage_large
+    - field.field.node.exhibit.field_featured_image
+    - field.field.node.exhibit.field_hero_copy
+    - field.field.node.exhibit.field_hero_slides
+    - field.field.node.exhibit.field_homepage_image
+    - field.field.node.exhibit.field_meta_tags
+    - field.field.node.exhibit.field_page_sections
+    - field.field.node.exhibit.field_styled_title
+    - field.field.node.exhibit.field_summary
+    - field.field.node.exhibit.field_yoast_seo
+    - image.style.exhibit_thumb
+    - node.type.exhibit
+  module:
+    - ds
+    - field_group
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - field_featured_image
+        - group_details_wrapper
+        - node_title
+        - field_summary
+        - node_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': ''
+          wrapper: ''
+          class: ''
+  field_group:
+    group_details_wrapper:
+      children:
+        - node_title
+        - field_summary
+        - node_link
+      label: 'Details Wrapper'
+      parent_name: ''
+      region: ds_content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Details Wrapper'
+        classes: details-wrapper
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.exhibit.homepage_teaser
+targetEntityType: node
+bundle: exhibit
+mode: homepage_teaser
+content:
+  field_featured_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: content
+      image_style: exhibit_thumb
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  field_summary:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+hidden:
+  body: true
+  field_featured_homepage: true
+  field_featured_homepage_large: true
+  field_hero_copy: true
+  field_hero_slides: true
+  field_homepage_image: true
+  field_meta_tags: true
+  field_page_sections: true
+  field_styled_title: true
+  field_yoast_seo: true
+  links: true

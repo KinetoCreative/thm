@@ -1,0 +1,23 @@
+uuid: 4e4cc91a-08fe-4308-ab9f-d78ca5c9fb3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.2017_2018_field_trip_reservation
+    - field.storage.contact_message.field_if_yes_how_many_bags_
+id: contact_message.2017_2018_field_trip_reservation.field_if_yes_how_many_bags_
+field_name: field_if_yes_how_many_bags_
+entity_type: contact_message
+bundle: 2017_2018_field_trip_reservation
+label: 'If yes, how many bags?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 0fd4ebcc-3054-47f6-b7f3-314c7d690c2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.program_interest_form
+    - field.storage.contact_message.field_email
+id: contact_message.program_interest_form.field_email
+field_name: field_email
+entity_type: contact_message
+bundle: program_interest_form
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

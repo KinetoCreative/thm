@@ -1,0 +1,14 @@
+uuid: 4cab8007-1ff4-4fbb-be82-81bd6574d344
+langcode: en
+status: false
+dependencies: {  }
+id: other_file
+label: 'Other file'
+description: 'Misc. files.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map:
+  name: name

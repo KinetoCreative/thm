@@ -1,0 +1,19 @@
+uuid: e2bf2fd3-9b06-4014-b5c5-1b8558e5d758
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_ids
+    - paragraphs.paragraphs_type.sidebar_and_blocklist
+id: paragraph.sidebar_and_blocklist.field_block_ids
+field_name: field_block_ids
+entity_type: paragraph
+bundle: sidebar_and_blocklist
+label: 'Block ids'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

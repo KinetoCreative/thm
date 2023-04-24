@@ -1,0 +1,8 @@
+uuid: 0ca51f9c-bef4-49e1-a09e-3b5f8461b459
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_exhibits
+label: 'Homepage Exhibits'
+revision: 0
+description: ''

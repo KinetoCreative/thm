@@ -1,0 +1,21 @@
+uuid: 4601add5-cb4d-4f72-8b5a-6faed67a4d64
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.group_reservation_form
+    - field.storage.contact_message.field_state
+  module:
+    - options
+id: contact_message.group_reservation_form.field_state
+field_name: field_state
+entity_type: contact_message
+bundle: group_reservation_form
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

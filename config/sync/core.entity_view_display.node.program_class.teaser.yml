@@ -1,0 +1,116 @@
+uuid: 4b89af64-97d7-4fa4-ba91-3ca6f7cddec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program_class.body
+    - field.field.node.program_class.field_image
+    - field.field.node.program_class.field_link_url
+    - field.field.node.program_class.field_meta_tags
+    - field.field.node.program_class.field_price
+    - field.field.node.program_class.field_program_form
+    - field.field.node.program_class.field_summary
+    - field.field.node.program_class.field_yoast_seo
+    - node.type.program_class
+  module:
+    - ds
+    - field_group
+    - image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_class_footer:
+      children:
+        - field_price
+        - node_link
+      label: 'Class Footer'
+      parent_name: ''
+      region: ds_content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: class-footer
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+  ds:
+    layout:
+      id: ds_1col
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+      path: modules/ds
+    regions:
+      ds_content:
+        - field_image
+        - node_title
+        - field_summary
+        - group_class_footer
+        - field_price
+        - node_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+      node_link:
+        plugin_id: node_link
+        weight: 12
+        label: hidden
+        formatter: default
+id: node.program_class.teaser
+targetEntityType: node
+bundle: program_class
+mode: teaser
+content:
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  field_price:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: ds_content
+  field_summary:
+    type: text_trimmed
+    label: above
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+hidden:
+  addtoany: true
+  body: true
+  field_link_url: true
+  field_meta_tags: true
+  field_program_form: true
+  field_yoast_seo: true
+  links: true
