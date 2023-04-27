@@ -1,8 +1,0 @@
-uuid: 22260e77-190c-4486-b32e-479bc3d13e45
-langcode: en
-status: true
-dependencies: {  }
-id: content_page_parent_header
-label: 'Content Page Parent Header'
-revision: 0
-description: ''

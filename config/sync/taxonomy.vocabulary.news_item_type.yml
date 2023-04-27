@@ -1,8 +1,0 @@
-uuid: 54c25a4a-ae6f-40be-82b1-32d1df5353bd
-langcode: en
-status: true
-dependencies: {  }
-name: 'News Item Type'
-vid: news_item_type
-description: ''
-weight: 0

@@ -1,8 +1,0 @@
-uuid: 34289e6b-aa76-4fd9-a893-1d173b5f1439
-langcode: en
-status: true
-dependencies: {  }
-id: contextual_boxes
-label: 'Contextual boxes'
-revision: 0
-description: ''

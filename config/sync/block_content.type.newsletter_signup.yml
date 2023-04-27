@@ -1,8 +1,0 @@
-uuid: 4a3de7f3-8985-4138-a511-c7c91fe133c0
-langcode: en
-status: true
-dependencies: {  }
-id: newsletter_signup
-label: 'Newsletter signup'
-revision: 0
-description: ''

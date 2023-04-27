@@ -1,8 +1,0 @@
-uuid: 87cd9986-97e3-4572-861c-c578d83d9287
-langcode: en
-status: true
-dependencies: {  }
-id: short_textarea
-label: 'Short Textarea'
-revision: 0
-description: ''
