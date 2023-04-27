@@ -64,3 +64,5 @@
 # Dev environments
 /.ddev
 /.idea
+/.editorconfig
+/.gitattributes
