@@ -153,6 +153,9 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "scripts": {
+            "post-drupal-scaffold-cmd": ["sed -i '' -e '1r scripts/htmods.txt' web/.htaccess"]
         }
     }
 }
