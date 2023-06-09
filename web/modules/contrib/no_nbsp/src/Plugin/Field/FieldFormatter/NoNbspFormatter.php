@@ -28,7 +28,7 @@ class NoNbspFormatter extends FormatterBase {
 
     foreach ($items as $delta => $item) {
       $element[$delta] = [
-        '#markup' => _no_nbsp_eraser($item->value),
+        '#markup' => _no_nbsp_eraser($item->processed),
       ];
     }
 

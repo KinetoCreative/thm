@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\no_nbsp\Tests;
+namespace Drupal\Tests\no_nbsp\Functional;
 
 /**
  * The no non-breaking space filter acts as a field formatter.
@@ -22,7 +22,12 @@ class FieldFormatterTest extends NoNbspWebTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  protected $defaultTheme = 'stark';
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setUp(): void {
     parent::setUp();
     $this->drupalCreateContentType(['type' => 'page', 'name' => 'Basic page']);
     $this->user = $this->drupalCreateUser([
@@ -44,7 +49,7 @@ class FieldFormatterTest extends NoNbspWebTestBase {
 
     // Check admin interface.
     $this->drupalGet('admin/structure/types/manage/page/display');
-    $this->assertText(t('No Non-breaking Space Filter'));
+    $this->assertSession()->pageTextContains(t('No Non-breaking Space Filter'));
 
     // Create node with full html support.
     $edit = [];
@@ -52,20 +57,22 @@ class FieldFormatterTest extends NoNbspWebTestBase {
     $edit['title[0][value]'] = $title;
     $edit['body[0][value]'] = 'l&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;l';
     $edit['body[0][format]'] = 'without_no_nbsp';
-    $this->drupalPostForm('node/add/page', $edit, t('Save'));
+    $this->drupalGet('node/add/page');
+    $this->submitForm($edit, t('Save'));
     $node = $this->drupalGetNodeByTitle($title);
     // The field formatter is not set.
-    $this->assertRaw('l&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;l');
+    $this->assertSession()->responseContains('l&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;l');
 
     // Change display.
     $edit = [
       'fields[body][type]' => 'no_nbsp',
     ];
-    $this->drupalPostForm('admin/structure/types/manage/page/display', $edit, t('Save'));
+    $this->drupalGet('admin/structure/types/manage/page/display');
+    $this->submitForm($edit, t('Save'));
 
     // Check if the field formatter works.
     $this->drupalGet('node/' . $node->id());
-    $this->assertRaw('l o l');
+    $this->assertSession()->responseContains('l o l');
   }
 
 }

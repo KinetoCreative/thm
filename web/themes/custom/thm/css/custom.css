@@ -1849,6 +1849,7 @@ input[type="checkbox"] {
 
 .field--name-field-three-images.field__items {
   display: flex;
+  justify-content: center;
 }
 
 .field--name-field-three-images img {
@@ -1947,4 +1948,26 @@ input[type="checkbox"] {
     margin: 1rem;
     padding: 1rem;
   }
+}
+
+.casablanca .lbl-toggle {
+  background: #e6b333;
+}
+
+.casablanca .paragraph .field--name-field-title {
+  color: #00866c;
+}
+
+.casablanca .paragraph .field--name-field-button-link a {
+  background-color: #00866c;
+  color: white !important;
+}
+
+.casablanca .paragraph. field--name-field-cta-link a {
+  background-color: #0e2a54;
+  color: white !important;
+}
+
+.casablanca .paragraph a {
+  color: #0e2a54;
 }

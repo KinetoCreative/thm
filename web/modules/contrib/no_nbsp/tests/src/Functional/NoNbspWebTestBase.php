@@ -1,46 +1,15 @@
 <?php
 
-namespace Drupal\no_nbsp\Tests;
+namespace Drupal\Tests\no_nbsp\Functional;
 
-use Drupal\simpletest\WebTestBase;
-
-/**
- * @file
- * Tests for the no_nbsp.module.
- */
+use Drupal\Tests\BrowserTestBase;
 
 /**
  * Base class for the no non-breaking space filter tests.
  *
  * Some helper methods.
  */
-abstract class NoNbspWebTestBase extends WebTestBase {
-
-  /**
-   * Create a new text format.
-   *
-   * Create a new text format with an enabled no non-breaking space filter
-   * programmatically.
-   *
-   * @param string $name
-   *   The machine name of the new text format.
-   * @param bool $status
-   *   If the filter is enabled or not.
-   */
-  protected function createTextFormatProgrammatically($name, $status) {
-    $format = [
-      'format' => $name,
-      'name' => $name,
-      'filters' => [
-        'filter_no_nbsp' => [
-          'status' => $status,
-        ],
-      ],
-    ];
-    $format = (object) $format;
-    filter_format_save($format);
-    return $format;
-  }
+abstract class NoNbspWebTestBase extends BrowserTestBase {
 
   /**
    * Create a new text format.
@@ -63,7 +32,8 @@ abstract class NoNbspWebTestBase extends WebTestBase {
     if ($status) {
       $edit['filters[filter_no_nbsp][status]'] = $status;
     }
-    $this->drupalPostForm('admin/config/content/formats/add', $edit, t('Save configuration'));
+    $this->drupalGet('admin/config/content/formats/add');
+    $this->submitForm($edit, t('Save configuration'));
     filter_formats_reset();
     $formats = filter_formats();
     return $formats[$name];
@@ -84,7 +54,8 @@ abstract class NoNbspWebTestBase extends WebTestBase {
     $edit['title[0][value]'] = $this->randomMachineName();
     $edit['body[0][value]'] = $text;
     $edit['body[0][format]'] = $format->get('name');
-    $this->drupalPostForm('node/add/page', $edit, t('Save'));
+    $this->drupalGet('node/add/page');
+    $this->submitForm($edit, t('Save'));
     $node = $this->drupalGetNodeByTitle($edit['title[0][value]']);
     $this->drupalGet('node/' . $node->id());
     return $node;

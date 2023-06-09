@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\no_nbsp\Tests;
+namespace Drupal\Tests\no_nbsp\Functional;
 
 /**
  * Functional tests.
@@ -10,7 +10,7 @@ namespace Drupal\no_nbsp\Tests;
  *
  * @group no_nbsp
  */
-class FunctionalTest extends NoNbspWebTestBase {
+class TextFormatAdminTest extends NoNbspWebTestBase {
 
   /**
    * {@inheritdoc}
@@ -25,7 +25,12 @@ class FunctionalTest extends NoNbspWebTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  protected $defaultTheme = 'stark';
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setUp(): void {
     parent::setUp();
     $this->drupalCreateContentType(['name' => 'page', 'type' => 'page']);
     $this->user = $this->drupalCreateUser([
@@ -43,10 +48,10 @@ class FunctionalTest extends NoNbspWebTestBase {
     // Check format add page.
     $this->drupalGet('admin/config/content/formats');
     $this->clickLink('Add text format');
-    $this->assertText(t('No Non-breaking Space Filter'), 'Title text is shown.');
-    $this->assertText(t('Delete all non-breaking space HTML entities.'), 'Description text is shown.');
-    $this->assertText(t('Preserve placeholders.'), 'Settings: Title.');
-    $this->assertText(t('A placeholder non-breaking space is surrounded by a HTML tag'), 'Settings: Description.');
+    $this->assertSession()->pageTextContains(t('No Non-breaking Space Filter'));
+    $this->assertSession()->pageTextContains(t('Delete all non-breaking space HTML entities.'));
+    $this->assertSession()->pageTextContains(t('Preserve placeholders.'));
+    $this->assertSession()->pageTextContains(t('A placeholder non-breaking space is surrounded by a HTML tag'));
 
     // Add new format.
     $format_id = 'no_nbsp_format';
@@ -58,42 +63,42 @@ class FunctionalTest extends NoNbspWebTestBase {
       'roles[authenticated]' => 1,
       'filters[filter_no_nbsp][status]' => 1,
     ];
-    $this->drupalPostForm(NULL, $edit, t('Save configuration'));
+    $this->submitForm($edit, t('Save configuration'));
 
     // Text the filters tips.
     $this->drupalGet('filter/tips');
-    $this->assertText(t('All non-breaking space HTML entities are replaced by blank space characters.'));
-    $this->assertText(t('Multiple contiguous space characters are replaced by a single blank space character.'));
+    $this->assertSession()->pageTextContains(t('All non-breaking space HTML entities are replaced by blank space characters.'));
+    $this->assertSession()->pageTextContains(t('Multiple contiguous space characters are replaced by a single blank space character.'));
 
     // Show submitted format edit page.
     $this->drupalGet('admin/config/content/formats/manage/' . $format_id);
 
     $input = $this->xpath('//input[@id="edit-filters-filter-no-nbsp-status"]');
-    $this->assertEqual($input[0]->attributes()->checked, 'checked');
+    $this->assertEquals($input[0]->getAttribute('checked'), 'checked');
 
     // Test the format object.
     filter_formats_reset();
     $formats = filter_formats();
-    $this->assertIdentical($formats[$format_id]->get('name'), $name);
+    $this->assertSame($formats[$format_id]->get('name'), $name);
 
     // Check format overview page.
     $this->drupalGet('admin/config/content/formats');
-    $this->assertText($name);
+    $this->assertSession()->pageTextContains($name);
 
     // Generate a page without the enabled text filter.
     $node = $this->createFormatAndNode('l&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;l', 0);
-    $this->assertRaw('l&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;l');
+    $this->assertSession()->responseContains('l&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;l');
     $this->drupalGet('node/' . $node->id() . '/edit');
     // no_nbsp_format exists at this time.
-    $this->assertText(t('All non-breaking space HTML entities are replaced by blank space characters.'));
-    $this->assertNoText(t('Multiple contiguous space characters are replaced by a single blank space character.'));
+    $this->assertSession()->pageTextContains(t('All non-breaking space HTML entities are replaced by blank space characters.'));
+    $this->assertSession()->pageTextNotContains(t('Multiple contiguous space characters are replaced by a single blank space character.'));
 
     // Generate a page with the enabled text filter.
     $node = $this->createFormatAndNode('l&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;l', 1);
-    $this->assertRaw('l o l');
+    $this->assertSession()->responseContains('l o l');
     $this->drupalGet('node/' . $node->id() . '/edit');
-    $this->assertText(t('All non-breaking space HTML entities are replaced by blank space characters.'));
-    $this->assertNoText(t('Multiple contiguous space characters are replaced by a single blank space character.'));
+    $this->assertSession()->pageTextContains(t('All non-breaking space HTML entities are replaced by blank space characters.'));
+    $this->assertSession()->pageTextNotContains(t('Multiple contiguous space characters are replaced by a single blank space character.'));
   }
 
 }
